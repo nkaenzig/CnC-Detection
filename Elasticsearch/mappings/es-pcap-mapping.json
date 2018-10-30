@@ -1,0 +1,99 @@
+{
+  "template": "packets-*",
+  "mappings": {
+    "pcap_file": {
+      "_source": { "enabled": true },
+      "dynamic": "false",
+      "properties": {
+        "timestamp": { "type": "date" },
+        "protocol": { "type": "keyword" },
+        "src_ip": { "type": "ip" },
+        "dst_ip": { "type": "ip" },
+        "src_port": { "type": "integer" },
+        "dst_port": { "type": "integer" },
+        "layers": {
+          "properties": {
+            "eth": {
+              "properties": {
+                "eth_eth_src": { "type": "keyword" },
+                "eth_eth_dst": { "type": "keyword" }
+              }
+            },
+            "ssl": {
+              "properties": {
+                "ssl_handshake_ssl_handshake_version": { "type": "keyword" },
+                "ssl_record_ssl_record_length": { "type": "integer" }
+              }
+            },
+            "frame": {
+              "properties": {
+                "frame_frame_len": { "type": "long" },
+                "frame_frame_protocols": { "type": "keyword" }
+              }
+            },
+            "ip": {
+              "properties": {
+                "ip_ip_src": { "type": "ip" },
+                "ip_ip_dst": { "type": "ip" },
+                "ip_ip_checksum_status": { "type": "byte" },
+                "ip_ip_ttl": { "type": "long" }
+              }
+            },
+            "ipv6": {
+              "properties": {    
+                "ipv6_ipv6_plen": { "type": "integer" },
+                "ipv6_ipv6_dst": { "type": "ip" },
+                "ipv6_ipv6_flow": { "type": "keyword" },
+                "ipv6_ipv6_src": { "type": "ip"}
+              }
+            },
+            "tcp": {
+              "properties": {
+                "tcp_flags_tcp_flags_cwr": { "type": "byte" },
+                "tcp_flags_tcp_flags_ack": { "type": "byte" },
+                "tcp_flags_tcp_flags_syn": { "type": "byte" },
+                "tcp_flags_tcp_flags_res": { "type": "byte" },
+                "tcp_flags_tcp_flags_ns": { "type": "byte" },
+                "tcp_tcp_seq": { "type": "long" },
+                "tcp_tcp_stream": { "type": "integer" },
+                "tcp_tcp_ack": { "type": "long" },
+                "tcp_tcp_checksum_status": { "type": "byte" },
+                "tcp_tcp_srcport": { "type": "integer" },
+                "tcp_tcp_dstport": { "type": "integer" }
+              }
+            },
+            "udp": {
+              "properties": {
+                "udp_udp_dstport": { "type": "integer" },
+                "udp_udp_srcport": { "type": "integer" },
+                "udp_udp_checksum_status": { "type": "byte" },
+                "udp_udp_stream": { "type": "integer" }
+              }
+            },
+            "http": {
+              "properties": {
+                "http_http_request_full_uri": { "type": "keyword" },
+                "http_http_host": { "type": "keyword" },
+                "http_response_code": { "type": "integer" },
+                "http_response_code_desc": { "type": "keyword" },
+                "http_http_request": { "type": "byte" },
+                "http_http_response": { "type": "byte" }
+              }
+            },
+            "dns": {
+              "properties": {
+                "dns_flags_dns_flags_opcode": { "type": "byte" },
+                "dns_flags_dns_flags_checkdisable": { "type": "byte" },
+                "dns_flags_dns_flags_recavail": { "type": "byte" },
+                "text_dns_resp_name": { "type": "keyword" },
+                "text_dns_resp_class": { "type": "keyword" },
+                "text_dns_resp_type": { "type": "short" },
+                "text_dns_qry_type": { "type": "short" }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

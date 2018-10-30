@@ -1,0 +1,27 @@
+{
+  "template": "bro-*",
+  "settings" : {
+      "index" : {
+          "number_of_shards" : 1, 
+          "number_of_replicas" : 0 
+      }
+  },
+  "mappings": {
+    "bro": {
+      "_source": { "enabled": true },
+      "dynamic": "true",
+      "properties": {
+        "timestamp": { "type": "date" },
+        "duration": { "type": "float" },
+        "src_ip": { "type": "ip" },
+        "dst_ip": { "type": "ip" },
+        "src_port": { "type": "integer" },
+        "dst_port": { "type": "integer" },
+        "orig_pkts": { "type": "long" },
+        "resp_pkts": { "type": "long" },
+        "orig_ip_bytes": { "type": "long" },
+        "resp_ip_bytes": { "type": "long" }
+      }
+    }
+  }
+}

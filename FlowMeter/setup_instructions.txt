@@ -1,0 +1,12 @@
+1. IntelliJ IDEA --> Import project --> select dir --> gradle
+2. Install maven --> download from chip --> create environment variable M3_HOME (maven install dir), and add install_dir/bin to path
+(make sure that JAVA_HOME = jdk/bin)
+(check java -version, mvn -v)
+3. cd pathtoproject/jnetpcap/win/jnetpcap-1.4.r1425
+mvn install:install-file -Dfile=jnetpcap.jar -DgroupId=org.jnetpcap -DartifactId=jnetpcap -Dversion=1.4.1 -Dpackaging=jar
+4. cd pathtoproject
+gradlew execute
+
+- how to exectude/debug?
+< intelliJ: View->Tool Windows-> Gradle
+other/execute --> right click: run/debug

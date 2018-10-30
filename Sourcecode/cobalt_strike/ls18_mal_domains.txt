@@ -1,0 +1,13 @@
+amazon-cdn.ex
+helpdesk.internal.ex
+makamai.ex
+records.mil.ex
+versioncheck.addons.mozillla.ex
+windowsupdate.ex
+www.facepalm.ex
+www.int-telco.ex
+www.milops.ex
+www.morezilla.ex
+www.motorolla.ex
+www.pilot-gd.ex
+www.wikimedia.ex

@@ -1,0 +1,12 @@
+### Directories ###
+.gradle/
+.idea/
+build/
+out/
+logs/
+
+### Fileendings ###
+## root directory
+# *.pyc 
+## all directories
+# **.pyc 

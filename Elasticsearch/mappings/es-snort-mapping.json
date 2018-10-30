@@ -1,0 +1,25 @@
+{
+  "template": "snort-*",
+  "settings" : {
+      "index" : {
+          "number_of_shards" : 1, 
+          "number_of_replicas" : 0 
+      }
+  },
+  "mappings": {
+    "snort": {
+      "_source": { "enabled": true },
+      "dynamic": "true",
+      "properties": {
+        "timestamp": { "type": "date" },
+        "src_ip": { "type": "ip" },
+        "dst_ip": { "type": "ip" },
+        "ethsrc": { "type": "keyword" },
+        "ethdst": { "type": "keyword" },
+        "src_port": { "type": "integer" },
+        "dst_port": { "type": "integer" },
+        "malicious": { "type": "keyword" }
+      }
+    }
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "description" : "Pipeline to rename ipv4, ipv6 and tcp/udp port fields",
+  "processors" : [
+    {
+      "rename": {
+        "field": "layers.ip.ip_ip_src",
+        "target_field": "src_ip",
+        "ignore_missing": true
+      }
+    },
+    {
+      "rename": {
+        "field": "layers.ip.ip_ip_dst",
+        "target_field": "dst_ip",
+        "ignore_missing": true
+      }
+    },
+    {
+      "rename": {
+        "field": "layers.ipv6.ipv6_ipv6_src",
+        "target_field": "src_ip",
+        "ignore_missing": true,
+        "ignore_failure" : true
+      }
+    },
+    {
+      "rename": {
+        "field": "layers.ipv6.ipv6_ipv6_dst",
+        "target_field": "dst_ip",
+        "ignore_missing": true,
+        "ignore_failure" : true
+      }
+    },
+    {
+      "rename": {
+        "field": "layers.tcp.tcp_tcp_srcport",
+        "target_field": "src_port",
+        "ignore_missing": true
+ 
+      }
+    },
+    {
+      "rename": {
+        "field": "layers.tcp.tcp_tcp_dstport",
+        "target_field": "dst_port",
+        "ignore_missing": true
+      }
+    },
+    {
+      "rename": {
+        "field": "layers.udp.udp_udp_srcport",
+        "target_field": "src_port",
+        "ignore_missing": true,
+        "ignore_failure" : true
+      }
+    },
+    {
+      "rename": {
+        "field": "layers.udp.udp_udp_dstport",
+        "target_field": "dst_port",
+        "ignore_missing": true,
+        "ignore_failure" : true
+      }
+    }
+  ]
+}
