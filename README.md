@@ -18,7 +18,7 @@ Finally, we evaluate unsupervised clustering approaches first on the novel intru
 File contents
 --------
 
-```bash
+```
 /sourcecode: Contains the complete sourcecode written throughout this thesis
     - bro_main.py: Main script used for analysing the Bro .log-files.
     - bro_misc.py: Helper functios used for analysing the Bro .log-files.
@@ -55,12 +55,12 @@ File contents
         < team7CH_opnotes_proc.txt: Textfile generated from Operation Notes report, which we parsed to extract the information for labeling the data by sessions
 ```
     
-```bash    
+```    
 /FlowMeter:
     - Compiled version of the modified FlowMeter tool. Can be run with Java SE Runtime Environment 8
 ```
 
-```bash    
+```    
 /Elasticsearch:
     - export.json: Contains the complete Kibana configurations (Dashboard, Searches, Visualizations). This file was generated using Kibana's "export everything" option.
     - pcap-ingest-pipeline.json: Ingest pipeline to rename ipv4, ipv6 and tcp/udp port fields for the PCAP index
